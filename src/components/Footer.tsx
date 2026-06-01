@@ -4,7 +4,7 @@ export function Footer() {
       <div className="footer-inner container">
         <div className="footer-identity">
           <span className="footer-name">Blake Anderson</span>
-          <span className="footer-role">Design Engineer</span>
+          <span className="footer-role">Software Engineer</span>
         </div>
         <nav className="footer-links" aria-label="Footer links">
           <a href="mailto:bganderson95@gmail.com">bganderson95@gmail.com</a>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { SocialLinks } from './SocialLinks'
 
 export function Hero() {
   const [loaded, setLoaded] = useState(false)
@@ -11,7 +12,7 @@ export function Hero() {
   return (
     <section className="hero" id="top">
       <div className={`hero-inner container${loaded ? ' hero-loaded' : ''}`}>
-        <span className="hero-eyebrow">Design Engineer</span>
+        <span className="hero-eyebrow">Software Engineer</span>
         <h1 className="hero-name">
           Blake<br />Anderson
         </h1>
@@ -29,6 +30,9 @@ export function Hero() {
           >
             Download Resume
           </a>
+        </div>
+        <div className={`hero-social fade-up${loaded ? ' visible' : ''}`} style={{ transitionDelay: '360ms' }}>
+          <SocialLinks />
         </div>
       </div>
       <div className="hero-bg" aria-hidden="true">
