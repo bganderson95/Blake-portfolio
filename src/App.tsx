@@ -1,23 +1,28 @@
-import { Analytics } from "@vercel/analytics/react";
-import "./App.css";
+import { Analytics } from '@vercel/analytics/react'
+import { Nav } from './components/Nav'
+import { Hero } from './components/Hero'
+import { Projects } from './components/Projects'
+import { Gallery } from './components/Gallery'
+import { Writing } from './components/Writing'
+import { About } from './components/About'
+import { Footer } from './components/Footer'
 
 function App() {
   return (
     <>
-      <main className="page">
-        <section className="card">
-          <p className="eyebrow">Blake Anderson</p>
-          <h1>Portfolio under construction</h1>
-          <p>
-            I'm rebuilding this site. In the meantime, feel free to reach out or
-            check back soon.
-          </p>
-        </section>
+      <div className="page-bg" aria-hidden="true" />
+      <Nav />
+      <main>
+        <Hero />
+        <Projects />
+        <Gallery />
+        <Writing />
+        <About />
       </main>
-
+      <Footer />
       <Analytics />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
