@@ -1,5 +1,40 @@
 import { useState, useEffect } from 'react'
 
+const THEMES = ['dusk', 'eclipse', 'bloom', 'deepsea', 'ember'] as const
+
+type Theme = typeof THEMES[number]
+
+// [bg, accent, text-1] — gives a quick read of tone + pop color + contrast
+const THEME_PREVIEWS: Record<Theme, [string, string, string]> = {
+  dusk:    ['#fef5ec', '#0d7a70', '#1a0e06'],
+  eclipse: ['#0c0814', '#f43f5e', '#e8e0f8'],
+  bloom:   ['#f4f9f0', '#c4280c', '#101a0c'],
+  deepsea: ['#071520', '#ff7050', '#c8e8ee'],
+  ember:   ['#0e0a06', '#e8780a', '#f5ede0'],
+}
+
+function PaletteIcon() {
+  return (
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="13.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="17.5" cy="10.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="8.5" cy="7" r="1" fill="currentColor" stroke="none" />
+      <circle cx="6.5" cy="12.5" r="1" fill="currentColor" stroke="none" />
+      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125C12.92 18.75 12.75 18.42 12.75 18c0-.92.75-1.667 1.667-1.667H16c3.314 0 6-2.686 6-6C22 6.77 17.523 2 12 2z" />
+    </svg>
+  )
+}
+
 function Logo() {
   return (
     <svg
@@ -16,12 +51,26 @@ function Logo() {
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const [currentTheme, setCurrentTheme] = useState<Theme | null>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const nextIndex = currentTheme === null
+    ? 0
+    : (THEMES.indexOf(currentTheme) + 1) % THEMES.length
+  const nextTheme = THEMES[nextIndex]
+  const nextColors = THEME_PREVIEWS[nextTheme]
+
+  const cycleTheme = () => {
+    document.documentElement.classList.add('theme-transitioning')
+    document.documentElement.setAttribute('data-theme', nextTheme)
+    setCurrentTheme(nextTheme)
+    setTimeout(() => document.documentElement.classList.remove('theme-transitioning'), 400)
+  }
 
   return (
     <header className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
@@ -35,6 +84,19 @@ export function Nav() {
           <a href="#writing">Writing</a>
           <a href="#about">About</a>
         </nav>
+        <button
+          className="nav-theme-btn"
+          onClick={cycleTheme}
+          aria-label={`Switch to ${nextTheme} theme`}
+          title={`Next: ${nextTheme}`}
+        >
+          <PaletteIcon />
+          <span className="nav-theme-swatches" aria-hidden="true">
+            {nextColors.map((color, i) => (
+              <span key={i} className="nav-theme-swatch" style={{ background: color }} />
+            ))}
+          </span>
+        </button>
         <a
           href="/Blake_Anderson_Resume_Design_Engineering.pdf"
           target="_blank"

@@ -57,6 +57,85 @@
 }
 
 /* ==========================================================================
+   COLOR THEMES
+   ========================================================================== */
+
+.theme-transitioning * {
+  transition: background-color 0.35s ease, color 0.35s ease,
+    border-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* Dusk — warm cream bg, deep teal accent */
+[data-theme="dusk"] {
+  color-scheme: light;
+  --clr-bg:        #fef5ec;
+  --clr-surface:   #ffffff;
+  --clr-text-1:    #1a0e06;
+  --clr-text-2:    #7a5a3a;
+  --clr-text-3:    #b89a70;
+  --clr-border:    #ecdfc8;
+  --clr-border-2:  #d8c4a0;
+  --clr-accent:    #0d7a70;
+  --clr-accent-bg: rgba(13, 122, 112, 0.08);
+}
+
+/* Eclipse — dark purple-black bg, vivid rose accent */
+[data-theme="eclipse"] {
+  color-scheme: dark;
+  --clr-bg:        #0c0814;
+  --clr-surface:   #140f20;
+  --clr-text-1:    #e8e0f8;
+  --clr-text-2:    #9080c0;
+  --clr-text-3:    #584880;
+  --clr-border:    #1a1228;
+  --clr-border-2:  #241a38;
+  --clr-accent:    #f43f5e;
+  --clr-accent-bg: rgba(244, 63, 94, 0.12);
+}
+
+/* Bloom — soft sage bg, burnt orange accent */
+[data-theme="bloom"] {
+  color-scheme: light;
+  --clr-bg:        #f4f9f0;
+  --clr-surface:   #ffffff;
+  --clr-text-1:    #101a0c;
+  --clr-text-2:    #507040;
+  --clr-text-3:    #90b080;
+  --clr-border:    #d8ecd0;
+  --clr-border-2:  #c0d8b8;
+  --clr-accent:    #c4280c;
+  --clr-accent-bg: rgba(196, 40, 12, 0.08);
+}
+
+/* Deep Sea — dark teal-navy bg, coral accent */
+[data-theme="deepsea"] {
+  color-scheme: dark;
+  --clr-bg:        #071520;
+  --clr-surface:   #0c2030;
+  --clr-text-1:    #c8e8ee;
+  --clr-text-2:    #5098a8;
+  --clr-text-3:    #306878;
+  --clr-border:    #102840;
+  --clr-border-2:  #183850;
+  --clr-accent:    #ff7050;
+  --clr-accent-bg: rgba(255, 112, 80, 0.12);
+}
+
+/* Ember — near-black warm bg, amber flame accent */
+[data-theme="ember"] {
+  color-scheme: dark;
+  --clr-bg:        #0e0a06;
+  --clr-surface:   #181208;
+  --clr-text-1:    #f5ede0;
+  --clr-text-2:    #a08060;
+  --clr-text-3:    #706040;
+  --clr-border:    #241a0e;
+  --clr-border-2:  #302010;
+  --clr-accent:    #e8780a;
+  --clr-accent-bg: rgba(232, 120, 10, 0.12);
+}
+
+/* ==========================================================================
    BASE RESET
    ========================================================================== */
 
@@ -64,8 +143,6 @@
 
 body { margin: 0; }
 
-/* Gives mix-blend-mode: difference on the fixed nav a real compositing surface to
-   blend against. The CSS canvas background doesn't qualify — only rendered elements do. */
 .page-bg {
   position: fixed;
   inset: 0;
@@ -191,13 +268,15 @@ section[id] { scroll-margin-top: 80px; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  mix-blend-mode: difference;
+  background: color-mix(in srgb, var(--clr-bg) 82%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s var(--ease-out);
 }
 
 .nav--scrolled {
-  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: var(--clr-border);
 }
 
 .nav-inner {
@@ -213,7 +292,7 @@ section[id] { scroll-margin-top: 80px; }
   display: flex;
   align-items: center;
   margin-right: auto;
-  color: white;
+  color: var(--clr-accent);
   transition: opacity 0.15s;
 }
 .nav-logo:hover { opacity: 0.7; }
@@ -233,24 +312,60 @@ section[id] { scroll-margin-top: 80px; }
 .nav-links a {
   font-size: 13.5px;
   font-weight: 450;
-  color: white;
-  transition: opacity 0.15s;
+  color: var(--clr-text-2);
+  transition: color 0.15s;
 }
-.nav-links a:hover { opacity: 0.65; }
+.nav-links a:hover { color: var(--clr-text-1); }
+
+.nav-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 32px;
+  padding: 0 10px;
+  margin-left: 20px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--clr-border-2);
+  background: transparent;
+  color: var(--clr-text-2);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.15s, color 0.15s, transform 0.2s var(--ease-out);
+}
+.nav-theme-btn:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+  transform: translateY(-1px);
+}
+
+.nav-theme-swatches {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.nav-theme-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
 
 .nav-resume {
-  margin-left: 28px;
+  margin-left: 8px;
   font-size: 13px;
   font-weight: 500;
   padding: 7px 14px;
-  border: 1px solid white;
+  border: 1px solid var(--clr-border-2);
   border-radius: var(--r-sm);
-  color: white;
+  color: var(--clr-text-2);
   white-space: nowrap;
-  transition: opacity 0.15s, transform 0.15s;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
 }
 .nav-resume:hover {
-  opacity: 0.7;
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
   transform: translateY(-1px);
 }
 
