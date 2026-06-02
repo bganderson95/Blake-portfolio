@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { SocialLinks } from './SocialLinks'
+import { skills } from '../data/skills'
 
 export function Hero() {
   const [loaded, setLoaded] = useState(false)
@@ -21,15 +22,19 @@ export function Hero() {
           that help teams ship better digital products.
         </p>
         <div className="hero-actions">
-          <a href="#work" className="btn btn-primary">View My Work</a>
           <a
             href="/Blake_Anderson_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-secondary"
+            className="btn btn-secondary btn--sm"
           >
             Download Resume
           </a>
+        </div>
+        <div className={`hero-skills fade-up${loaded ? ' visible' : ''}`} style={{ transitionDelay: '280ms' }}>
+          {skills.map(s => (
+            <span key={s} className="skill-tag">{s}</span>
+          ))}
         </div>
         <div className={`hero-social fade-up${loaded ? ' visible' : ''}`} style={{ transitionDelay: '360ms' }}>
           <SocialLinks />

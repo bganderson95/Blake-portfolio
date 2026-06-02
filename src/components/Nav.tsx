@@ -60,11 +60,10 @@ export function Nav() {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(() => window.scrollY > 20);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
-    setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);

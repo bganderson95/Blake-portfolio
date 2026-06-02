@@ -1,17 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import VanillaTilt from 'vanilla-tilt'
 import { useIntersect } from '../hooks/useIntersect'
-
-const items = [
-  { id: 1, title: 'Homepage Redesign', src: '/gallery/Home%20Up.png' },
-  { id: 2, title: 'Search UI Animation', src: '/gallery/Search%20home.gif' },
-  { id: 3, title: 'Button Animation System', src: '/gallery/animated%20buttons%20home.gif' },
-  { id: 4, title: 'Centrifuge — Brand Identity', src: '/gallery/Centrifuge%20full%20logo.png' },
-  { id: 5, title: 'UX Icon Set', src: '/gallery/UX%20icons.png' },
-  { id: 6, title: 'DD — Icon System', src: '/gallery/DD%20icons.png' },
-]
-
-type Item = typeof items[0]
+import { galleryItems, type GalleryItem as Item } from '../data/gallery'
 
 function Modal({ item, onClose }: { item: Item; onClose: () => void }) {
   useEffect(() => {
@@ -30,8 +21,16 @@ function Modal({ item, onClose }: { item: Item; onClose: () => void }) {
     >
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose} aria-label="Close">✕</button>
-        <img src={item.src} alt={item.title} className="modal-img" />
+        <div className="modal-img-wrap" style={item.bg ? { background: item.bg } : undefined}>
+          <img src={item.src} alt={item.title} className="modal-img" />
+        </div>
         <p className="modal-caption">{item.title}</p>
+        {item.description && <p className="modal-description">{item.description}</p>}
+        {item.link && (
+          <Link to={item.link.href} className="modal-link" onClick={onClose}>
+            {item.link.label} →
+          </Link>
+        )}
       </div>
     </div>
   )
@@ -64,11 +63,11 @@ function GalleryItem({ item, index, onOpen }: { item: Item; index: number; onOpe
   return (
     <div
       ref={ref}
-      className={`gallery-item fade-up${visible ? ' visible' : ''}`}
+      className={`gallery-item${item.wide ? ' gallery-item--wide' : ''} fade-up${visible ? ' visible' : ''}`}
       style={{ transitionDelay: `${index * 55}ms` }}
       onClick={() => onOpen(item)}
     >
-      <div className="gallery-thumb">
+      <div className="gallery-thumb" style={item.bg ? { background: item.bg } : undefined}>
         <img src={item.src} alt={item.title} className="gallery-img" loading="lazy" />
         <div className="gallery-overlay">
           <span className="gallery-title">{item.title}</span>
@@ -95,7 +94,7 @@ export function Gallery() {
           </h2>
         </div>
         <div className="gallery-grid">
-          {items.map((item, i) => (
+          {galleryItems.map((item, i) => (
             <GalleryItem key={item.id} item={item} index={i} onOpen={setActiveItem} />
           ))}
         </div>
