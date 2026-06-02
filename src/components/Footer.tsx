@@ -9,7 +9,7 @@ export function Footer() {
         <nav className="footer-links" aria-label="Footer links">
           <a href="mailto:bganderson95@gmail.com">bganderson95@gmail.com</a>
           <a
-            href="https://github.com/bganderson95"
+            href="https://github.com/blakeganderson"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -23,8 +23,10 @@ export function Footer() {
             Resume
           </a>
         </nav>
-        <p className="footer-copy">© {new Date().getFullYear()} Blake Anderson</p>
+        <p className="footer-copy">
+          © {new Date().getFullYear()} Blake Anderson
+        </p>
       </div>
     </footer>
-  )
+  );
 }

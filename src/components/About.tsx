@@ -1,5 +1,6 @@
 import { useIntersect } from "../hooks/useIntersect";
 import { SocialLinks } from "./SocialLinks";
+import { skills } from "../data/skills";
 
 function HoverPic({ name, src }: { name: string; src: string }) {
   return (
@@ -12,27 +13,6 @@ function HoverPic({ name, src }: { name: string; src: string }) {
   );
 }
 
-const skills = [
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "Node.js",
-  "CSS",
-  "HTML",
-  "Design Systems",
-  "Design Tokens",
-  "Figma",
-  "Storybook",
-  "Chromatic",
-  "GitHub Actions",
-  "Visual Regression Testing",
-  "Core Web Vitals",
-  "CLI Design",
-  "AWS Lambda",
-  "AWS Bedrock",
-  "Frontend Performance",
-  "npm",
-];
 
 export function About() {
   const { ref, visible } = useIntersect<HTMLDivElement>();

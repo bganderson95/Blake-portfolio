@@ -8,6 +8,7 @@ import { Gallery } from './components/Gallery'
 import { Writing } from './components/Writing'
 import { Footer } from './components/Footer'
 import { AboutPage } from './pages/AboutPage'
+import { ProjectPage } from './pages/ProjectPage'
 
 function HomePage() {
   const { hash } = useLocation()
@@ -39,6 +40,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects/:slug" element={<ProjectPage />} />
       </Routes>
       <Analytics />
     </>
