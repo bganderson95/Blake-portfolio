@@ -1070,6 +1070,13 @@ section[id] { scroll-margin-top: 80px; }
   border-radius: 24px;
 }
 
+@media (max-width: 540px) {
+  .figma-prototype-embed {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+}
+
 .figma-prototype-embed iframe {
   width: 112%;
   height: 122%;
