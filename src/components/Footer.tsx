@@ -16,7 +16,7 @@ export function Footer() {
             GitHub
           </a>
           <a
-            href="/Blake_Anderson_Resume_Design_Engineering.pdf"
+            href="/Blake_Anderson_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

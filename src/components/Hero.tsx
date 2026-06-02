@@ -23,7 +23,7 @@ export function Hero() {
         <div className="hero-actions">
           <a href="#work" className="btn btn-primary">View My Work</a>
           <a
-            href="/Blake_Anderson_Resume_Design_Engineering.pdf"
+            href="/Blake_Anderson_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary"
