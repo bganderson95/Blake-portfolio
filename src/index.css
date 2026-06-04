@@ -1375,11 +1375,12 @@ section[id] { scroll-margin-top: 80px; }
 
 @media (max-width: 540px) {
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
   .gallery-item--wide {
-    grid-column: 1;
+    grid-column: span 2;
   }
 
   .gallery-item--wide .gallery-thumb {

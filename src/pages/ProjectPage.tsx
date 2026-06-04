@@ -1,11 +1,13 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { projects } from '../data/projects'
+import { ArcXPPage } from './projects/ArcXPPage'
 import { DeveloperCLIPage } from './projects/DeveloperCLIPage'
 import { FigmaTokenExporterPage } from './projects/FigmaTokenExporterPage'
 import { HYBRDPage } from './projects/HYBRDPage'
 import { ParcelPage } from './projects/ParcelPage'
 
 const customPages: Record<string, React.ComponentType> = {
+  'arc-themes-blocks': ArcXPPage,
   'developer-experience-cli': DeveloperCLIPage,
   'figma-arc-xp-token-exporter': FigmaTokenExporterPage,
   'hybrd-fitness-app': HYBRDPage,

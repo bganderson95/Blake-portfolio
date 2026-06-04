@@ -56,7 +56,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       )}
       <p className="project-description">{project.description}</p>
       <div className="project-footer">
-        {project.metrics.map((m) => (
+        {project.disciplines.map((m) => (
           <span key={m} className="metric-tag">
             {m}
           </span>

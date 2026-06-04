@@ -22,7 +22,7 @@ export function ProjectLayout({ project, children }: Props) {
             <span className="project-role">{project.role}</span>
           </div>
           <div className="project-page-tags">
-            {project.metrics.map(m => (
+            {project.disciplines.map(m => (
               <span key={m} className="metric-tag">{m}</span>
             ))}
             <span className="project-divider" aria-hidden="true" />
