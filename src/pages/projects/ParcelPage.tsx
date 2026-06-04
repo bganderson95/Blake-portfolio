@@ -85,7 +85,7 @@ export function ParcelPage() {
         </div>
       </section>
 
-      <section className="project-section">
+      {/* <section className="project-section">
         <h2 className="project-section-title">Prototype</h2>
         <p className="project-page-caption">The following shows a simple prototype flow for unlocking a paywalled article.</p>
         <div className="figma-prototype-embed figma-prototype-embed--wide">
@@ -94,7 +94,7 @@ export function ParcelPage() {
             allowFullScreen
           />
         </div>
-      </section>
+      </section> */}
 
       <section className="project-section">
         <h2 className="project-section-title">What Was Built</h2>
