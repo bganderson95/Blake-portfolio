@@ -6,7 +6,7 @@ const project = projects.find(p => p.slug === 'figma-arc-xp-token-exporter')!
 const outputs = [
   {
     file: 'global.json',
-    description: 'Primitive key-value tokens — colors, spacing, typography. Variable paths are flattened into Arc-compatible keys (e.g. global/color/primary → color-primary).',
+    description: 'Primitive key-value tokens: colors, spacing, typography. Variable paths are flattened into Arc-compatible keys (e.g. global/color/primary → color-primary).',
   },
   {
     file: 'alias.json',
@@ -26,17 +26,17 @@ export function FigmaTokenExporterPage() {
       <section className="project-section">
         <h2 className="project-section-title">Background</h2>
         <p className="project-page-description" style={{ marginBottom: 0 }}>
-          Arc XP Themes is a component-based design system used by media publishers to style and manage websites built on the Arc XP platform. It drives styles across blocks, pages, and templates through a structured design token bundle — JSON files that define primitive values, semantic aliases, and responsive breakpoints.
+          Arc XP Themes is a component-based design system used by media publishers to style and manage websites built on the Arc XP platform. It drives styles across blocks, pages, and templates through a structured design token bundle: JSON files that define primitive values, semantic aliases, and responsive breakpoints.
         </p>
         <p className="project-page-description" style={{ marginBottom: 0 }}>
-          Figma is where design decisions live, but Arc XP Themes expects those decisions in a specific JSON format under <code className="project-inline-code">themes/styles/</code>. Manually translating Figma Variables into that format is tedious and error-prone — especially as token counts grow and breakpoints multiply.
+          Figma is where design decisions live, but Arc XP Themes expects those decisions in a specific JSON format under <code className="project-inline-code">themes/styles/</code>. Manually translating Figma Variables into that format is tedious and error-prone, especially as token counts grow and breakpoints multiply.
         </p>
       </section>
 
       <section className="project-section">
         <h2 className="project-section-title">How It Works</h2>
         <p className="project-page-description">
-          The plugin reads local Figma Variables, classifies them by collection name and naming convention, and exports a complete token bundle as a ZIP. Number variables support multiple export modes — raw, px, rem, or inferred from the token name — giving teams control over unit handling without needing string overrides for every value.
+          The plugin reads local Figma Variables, classifies them by collection name and naming convention, and exports a complete token bundle as a ZIP. Number variables support multiple export modes (raw, px, rem, or inferred from the token name), giving teams control over unit handling without needing string overrides for every value.
         </p>
         <div className="token-outputs">
           {outputs.map(({ file, description }) => (

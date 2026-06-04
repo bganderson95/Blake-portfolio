@@ -6,7 +6,7 @@ const THEMES = [
   "eclipse",
   "bloom",
   "deepsea",
-  "sage",
+  "frost",
   "ember",
 ] as const;
 
@@ -17,7 +17,7 @@ const THEME_PREVIEWS: Record<Theme, [string, string, string]> = {
   eclipse: ["#0c0814", "#f43f5e", "#e8e0f8"],
   bloom:   ["#f4f9f0", "#c4280c", "#101a0c"],
   deepsea: ["#071520", "#ff7050", "#c8e8ee"],
-  sage:    ["#f1f4e8", "#6f8f2f", "#14200d"],
+  frost:   ["#e6eff9", "#d47010", "#091828"],
   ember:   ["#0e0a06", "#e8780a", "#f5ede0"],
 };
 

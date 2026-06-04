@@ -12,14 +12,14 @@ const pieces = [
     title: 'Using AI for Feature Development',
     badge: 'Blog',
     description:
-      'How I integrated LLM tooling into a production frontend development workflow — from prompt design to production-ready UI artifact generation.',
+      'How I integrated LLM tooling into a production frontend development workflow, from prompt design to production-ready UI artifact generation.',
     url: 'https://dev.arcxp.com/blog/using-ai-for-feature-development/',
   },
   {
     title: 'Arc XP CLI: New Features',
     badge: 'Blog',
     description:
-      "A deep dive into new developer tooling capabilities I shipped for the Arc XP platform's CLI — consolidating common workflows into single-command automation.",
+      "A deep dive into new developer tooling capabilities I shipped for the Arc XP platform's CLI, consolidating common workflows into single-command automation.",
     url: 'https://dev.arcxp.com/blog/arcxp-cli-new-features/',
   },
 ]

@@ -11,10 +11,13 @@ export type GalleryItem = {
 export const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    title: "Homepage Redesign",
-    src: "/gallery/Home%20Up.png",
-    description: "",
-    bg: "#ffffff",
+    title: "HYBRD Logo Concept",
+    src: "gallery/Hybrd Logo Transparent.png",
+    description: "Logo concept for the HYBRD fitness app.",
+    link: {
+      href: "/projects/hybrd-fitness-app",
+      label: "View project",
+    },
   },
   {
     id: 2,
@@ -25,13 +28,11 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 3,
-    title: "HYBRD Logo Concept",
-    src: "gallery/Hybrd Logo Transparent.png",
-    description: "Logo concept for the HYBRD fitness app.",
-    link: {
-      href: "/projects/hybrd-fitness-app",
-      label: "View project breakdown",
-    },
+    title: "Parcel — Logomark",
+    src: "/gallery/Parcel-logo.svg",
+    bg: "#f0ede8",
+    description: "Logo for Parcel, a Chrome extension exploring micropayments for paywalled news articles.",
+    link: { href: "/projects/parcel-chrome-extension", label: "View project" },
   },
   {
     id: 4,

@@ -9,13 +9,5 @@ export const skills = [
   "Design Tokens",
   "Figma",
   "Storybook",
-  "Chromatic",
-  "GitHub Actions",
-  "Visual Regression Testing",
   "Core Web Vitals",
-  "CLI Design",
-  "AWS Lambda",
-  "AWS Bedrock",
-  "Frontend Performance",
-  "npm",
 ]

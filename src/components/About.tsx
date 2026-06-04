@@ -1,6 +1,5 @@
 import { useIntersect } from "../hooks/useIntersect";
 import { SocialLinks } from "./SocialLinks";
-import { skills } from "../data/skills";
 
 function HoverPic({ name, src }: { name: string; src: string }) {
   return (
@@ -31,9 +30,7 @@ export function About() {
               className={`section-title fade-up${visible ? " visible" : ""}`}
               style={{ transitionDelay: "80ms" }}
             >
-              Engineering and design
-              <br />
-              aren't trade-offs
+              A little bit about me
             </h2>
           </div>
           <div className="about-inner">
@@ -55,23 +52,20 @@ export function About() {
             >
               <div className="about-bio">
                 <p>
-                  Staff software engineer at The Washington Post working on Arc
-                  XP — a publishing platform used by hundreds of media
-                  organizations around the world. My work sits between platform
-                  engineering and product experience: building React component
-                  libraries, developer tooling, platform APIs, and frontend
-                  systems that help teams ship digital products at scale.
+                  Hey, I'm Blake. I'm a staff software engineer at The Washington Post,
+                  where I work on Arc XP, a publishing platform used by hundreds of
+                  media organizations around the world. I spend most of my time
+                  building React component libraries, developer tooling, and frontend
+                  systems that help teams ship better digital products.
                 </p>
                 <p>
-                  I studied systems engineering and economics at UVA, crossed
-                  into UX and design work early in my career at IBM, and
-                  completed a UX design course through General Assembly. My
-                  college capstone paper was on designing policy simulation
-                  experiences for global food security — not a typical
-                  engineering thesis. That mix shaped how I think: I care about
-                  how tools feel to use, how systems are understood, and what it
-                  means for software to be well-made rather than just
-                  functional.
+                  I came up through systems engineering and economics at UVA, got my
+                  first taste of product thinking at IBM, and picked up formal UX
+                  training through General Assembly along the way. My college capstone
+                  was on designing policy simulation experiences for global food
+                  security. Not exactly a typical engineering thesis. That mix of
+                  technical and human-centered thinking has stuck with me: I care a
+                  lot about how software feels to use, not just whether it works.
                 </p>
                 <p>
                   I now live in Richmond, VA with my wife{" "}
@@ -81,13 +75,6 @@ export function About() {
                   at work, you can find me running, taking art classes at my
                   local art museum, playing golf, or going for a hike!
                 </p>
-              </div>
-              <div className="about-skills">
-                {skills.map((s) => (
-                  <span key={s} className="skill-tag">
-                    {s}
-                  </span>
-                ))}
               </div>
             </div>
           </div>
