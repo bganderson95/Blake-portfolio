@@ -31,7 +31,8 @@ export const galleryItems: GalleryItem[] = [
     title: "Parcel — Logomark",
     src: "/gallery/Parcel-logo.svg",
     bg: "#f0ede8",
-    description: "Logo for Parcel, a Chrome extension exploring micropayments for paywalled news articles.",
+    description:
+      "Logo for Parcel, a Chrome extension exploring micropayments for paywalled news articles.",
     link: { href: "/projects/parcel-chrome-extension", label: "View project" },
   },
   {
@@ -80,10 +81,11 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 10,
-    title: "Geometric Logo",
-    src: "/gallery/Geometric%20Logo.png",
-    description: "",
-    bg: "#ffffff",
+    title: "Wedding Logo",
+    src: "/gallery/Blake-Wedding-Logo.png",
+    description:
+      "Logo design for my wedding in Portugal. Saúde means cheers in Portuguese, and the logo was designed to resemble a traditional portuguese tile. The scene in the middle of the tile resembles the view from our venue in the Douro Valley.",
+    bg: "#f7f5f0",
   },
   {
     id: 11,
