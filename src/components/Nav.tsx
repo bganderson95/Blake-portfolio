@@ -2,23 +2,23 @@ import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const THEMES = [
-  "dusk",
-  "eclipse",
-  "bloom",
-  "deepsea",
-  "frost",
-  "ember",
+  "sifnos",
+  "ursula",
+  "curacao",
+  "wahoowa",
+  "snowspeeder",
+  "ewok",
 ] as const;
 
 type Theme = (typeof THEMES)[number];
 
 const THEME_PREVIEWS: Record<Theme, [string, string, string]> = {
-  dusk:    ["#fef5ec", "#0d7a70", "#1a0e06"],
-  eclipse: ["#0c0814", "#f43f5e", "#e8e0f8"],
-  bloom:   ["#f4f9f0", "#c4280c", "#101a0c"],
-  deepsea: ["#071520", "#ff7050", "#c8e8ee"],
-  frost:   ["#e6eff9", "#d47010", "#091828"],
-  ember:   ["#0e0a06", "#e8780a", "#f5ede0"],
+  sifnos:  ["#fef5ec", "#0d7a70", "#1a0e06"],
+  ursula:  ["#0c0814", "#f43f5e", "#e8e0f8"],
+  curacao: ["#f3eecc", "#cc1468", "#0a1e3c"],
+  wahoowa: ["#071520", "#ff7050", "#c8e8ee"],
+  snowspeeder: ["#e6eff9", "#d47010", "#091828"],
+  ewok:        ["#0e0a06", "#e8780a", "#f5ede0"],
 };
 
 function PaletteIcon() {
