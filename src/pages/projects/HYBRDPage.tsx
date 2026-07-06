@@ -1,5 +1,6 @@
 import { ProjectLayout } from "../../components/ProjectLayout";
 import { projects } from "../../data/projects";
+import { usePageMeta } from "../../hooks/usePageMeta";
 
 const project = projects.find((p) => p.slug === "hybrd-fitness-app")!;
 
@@ -23,6 +24,10 @@ const logoBreakdown = [
 ];
 
 export function HYBRDPage() {
+  usePageMeta(
+    'HYBRD Fitness App — UX/UI Design & Branding | Blake Anderson',
+    'Designed high-fidelity Figma prototypes for a fitness app accepted into Y Combinator — onboarding flows, workout builder, custom branding, and full product UX from zero.'
+  )
   return (
     <ProjectLayout project={project}>
       <p className="project-page-description">{project.description}</p>

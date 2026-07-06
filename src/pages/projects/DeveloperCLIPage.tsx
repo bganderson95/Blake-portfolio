@@ -1,5 +1,6 @@
 import { ProjectLayout } from '../../components/ProjectLayout'
 import { projects } from '../../data/projects'
+import { usePageMeta } from '../../hooks/usePageMeta'
 
 const project = projects.find(p => p.slug === 'developer-experience-cli')!
 
@@ -27,6 +28,10 @@ const contributions = [
 ]
 
 export function DeveloperCLIPage() {
+  usePageMeta(
+    'Developer Experience CLI — Tool Design & Engineering | Blake Anderson',
+    'Architected a plugin-based CLI for Arc XP developer workflows, plus an AI-powered block generator prototype using natural language prompts to create production frontend artifacts.'
+  )
   return (
     <ProjectLayout project={project}>
       <p className="project-page-description">

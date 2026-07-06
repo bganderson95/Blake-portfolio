@@ -1,5 +1,6 @@
 import { ProjectLayout } from '../../components/ProjectLayout'
 import { projects } from '../../data/projects'
+import { usePageMeta } from '../../hooks/usePageMeta'
 
 const project = projects.find(p => p.slug === 'parcel-chrome-extension')!
 
@@ -42,6 +43,10 @@ const technical = [
 ]
 
 export function ParcelPage() {
+  usePageMeta(
+    'Parcel — Product Design & Chrome Extension | Blake Anderson',
+    'Designed and built a Chrome extension prototype for article micropayments — branding, UI design, OAuth authentication, wallet purchase flow, and a serverless AWS backend.'
+  )
   return (
     <ProjectLayout project={project}>
       <p className="project-page-description">{project.description}</p>

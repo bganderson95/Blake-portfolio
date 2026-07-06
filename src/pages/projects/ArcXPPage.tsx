@@ -1,5 +1,6 @@
 import { ProjectLayout } from '../../components/ProjectLayout'
 import { projects } from '../../data/projects'
+import { usePageMeta } from '../../hooks/usePageMeta'
 
 const project = projects.find(p => p.slug === 'arc-themes-blocks')!
 
@@ -39,6 +40,10 @@ const contributions = [
 ]
 
 export function ArcXPPage() {
+  usePageMeta(
+    'Arc Themes Blocks — Design Systems | Blake Anderson',
+    'Owned a 70+ package React design system used by hundreds of news publishers — design token pipeline, component architecture, and visual quality via Storybook and Chromatic.'
+  )
   return (
     <ProjectLayout project={project}>
       <p className="project-page-description">

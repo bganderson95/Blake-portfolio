@@ -1,5 +1,6 @@
 import { ProjectLayout } from '../../components/ProjectLayout'
 import { projects } from '../../data/projects'
+import { usePageMeta } from '../../hooks/usePageMeta'
 
 const project = projects.find(p => p.slug === 'figma-arc-xp-token-exporter')!
 
@@ -19,6 +20,10 @@ const outputs = [
 ]
 
 export function FigmaTokenExporterPage() {
+  usePageMeta(
+    'Figma Design Token Exporter — Plugin Development | Blake Anderson',
+    'Built a Figma plugin that exports design variables as Arc XP-ready JSON token bundles, bridging Figma design decisions directly to production CSS.'
+  )
   return (
     <ProjectLayout project={project}>
       <p className="project-page-description">{project.description}</p>
