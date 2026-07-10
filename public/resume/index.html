@@ -55,6 +55,7 @@
         max-width: var(--measure);
         margin: 0 auto;
         background: var(--paper);
+        aspect-ratio: 8.5 / 11; /* US letter proportions, like the PDF */
         padding: 44px 54px 40px;
         box-shadow:
           0 1px 3px rgba(0, 0, 0, 0.06),
@@ -364,8 +365,16 @@
         .page {
           box-shadow: none;
           max-width: 100%;
+          aspect-ratio: auto;
           padding: 0.35in 0.55in;
         }
+        section { margin-bottom: 20px; }
+        .summary { margin: 16px 0 24px; }
+        .entry { margin-bottom: 14px; }
+        .role-row { margin: 4px 0 5px; }
+        .sub-role { margin: 9px 0 4px; }
+        li { margin-bottom: 3.5px; }
+        .proj { margin-bottom: 9px; }
         section,
         .entry,
         .proj,
