@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume — Blake Anderson, Design Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Blake Anderson is a design engineer working across visual design, frontend craft, and product thinking, from design tokens to production React."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --body: #333333;
+        --muted: #666666;
+        --rule: #e4e2dd;
+        --accent: #1a5498;
+        --paper: #ffffff;
+        --measure: 760px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2, h3, h4 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      address {
+        font-style: normal;
+      }
+      html {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      body {
+        background: #f2f0ec;
+        color: var(--ink);
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 9.6pt;
+        line-height: 1.38;
+        padding: 40px 20px;
+      }
+      .page {
+        max-width: var(--measure);
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 44px 54px 40px;
+        box-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.06),
+          0 8px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      /* ---- Header ---- */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 9px;
+        border-bottom: 1.5px solid var(--ink);
+        margin-bottom: 4px;
+      }
+      .name {
+        font-family: "Fraunces", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-size: 33pt;
+        line-height: 0.95;
+        letter-spacing: -0.01em;
+      }
+      .role {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8pt;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: var(--accent);
+        font-weight: 500;
+        margin-top: 9px;
+      }
+      .contact {
+        text-align: right;
+        font-size: 8.8pt;
+        color: var(--muted);
+        line-height: 1.7;
+        white-space: nowrap;
+      }
+      .contact a {
+        color: var(--muted);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+      }
+      .contact a:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+      .contact .primary {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .contact .primary a {
+        color: var(--ink);
+        border-bottom: none;
+      }
+      .contact .primary a:hover {
+        color: var(--accent);
+      }
+
+      /* ---- Summary ---- */
+      .summary {
+        font-size: 9.9pt;
+        color: var(--body);
+        max-width: 94%;
+        margin: 13px 0 18px;
+        line-height: 1.48;
+      }
+      .summary strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      /* ---- Section ---- */
+      section {
+        margin-bottom: 12px;
+      }
+      .sec-head {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 9px;
+      }
+      .sec-head h2 {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8pt;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--accent);
+        white-space: nowrap;
+      }
+      .sec-head .line {
+        flex: 1;
+        height: 1px;
+        background: var(--rule);
+      }
+
+      /* ---- Job ---- */
+      .org {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1px;
+      }
+      .org-name {
+        font-family: "Fraunces", serif;
+        font-weight: 600;
+        font-size: 12.5pt;
+        letter-spacing: -0.005em;
+      }
+      .entry {
+        margin-bottom: 8px;
+      }
+      .entry:last-child {
+        margin-bottom: 0;
+      }
+      .role-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 3px 0 3px;
+      }
+      .title {
+        font-weight: 600;
+        font-size: 10pt;
+        color: var(--ink);
+      }
+      .dates {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 7.6pt;
+        font-weight: 400;
+        color: var(--muted);
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+        padding-left: 14px;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        margin-bottom: 2.5px;
+        color: var(--body);
+      }
+      li::before {
+        content: "";
+        flex: 0 0 auto;
+        margin-top: 0.62em;
+        width: 4px;
+        height: 4px;
+        background: var(--body);
+        border-radius: 50%;
+      }
+      li strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .sub-role {
+        margin: 6px 0 3px;
+        font-size: 10pt;
+        font-weight: 600;
+        color: var(--ink);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      /* ---- Projects ---- */
+      .proj-name {
+        font-weight: 600;
+        font-size: 10pt;
+        color: var(--ink);
+      }
+      .proj-name a {
+        color: var(--accent);
+        text-decoration: none;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 7.6pt;
+        letter-spacing: 0.03em;
+        font-weight: 500;
+        margin-left: 8px;
+        border-bottom: 1px solid transparent;
+      }
+      .proj-name a:hover {
+        border-color: var(--accent);
+      }
+      .proj {
+        margin-bottom: 6px;
+      }
+      .proj:last-child {
+        margin-bottom: 0;
+      }
+      .proj p {
+        color: var(--body);
+        margin-top: 1px;
+      }
+
+      /* ---- Bottom grid ---- */
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+      .edu-org {
+        font-family: "Fraunces", serif;
+        font-weight: 600;
+        font-size: 11pt;
+      }
+      .edu-sub {
+        color: var(--muted);
+        font-size: 9.4pt;
+        margin-top: 1px;
+      }
+      .edu-year {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 7.6pt;
+        color: var(--muted);
+        margin-top: 3px;
+        letter-spacing: 0.03em;
+      }
+      .skill-row {
+        margin-bottom: 6px;
+        line-height: 1.5;
+      }
+      .skill-label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 7.6pt;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        display: block;
+        margin-bottom: 1px;
+      }
+      .skill-val {
+        color: var(--body);
+        font-size: 9.6pt;
+      }
+
+      /* ---- Toolbar ---- */
+      .toolbar {
+        max-width: var(--measure);
+        margin: 0 auto 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+      .toolbar-back {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8pt;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .toolbar-back:hover {
+        color: var(--accent);
+      }
+      .toolbar-download {
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 9pt;
+        font-weight: 600;
+        color: #fff;
+        background: var(--accent);
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: background 0.15s ease;
+      }
+      .toolbar-download:hover {
+        background: #143f72;
+      }
+
+      /* ---- Colophon ---- */
+      .colophon {
+        max-width: var(--measure);
+        margin: 16px auto 0;
+        text-align: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 7.6pt;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+      .colophon a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+      }
+      .colophon a:hover {
+        border-color: var(--accent);
+      }
+
+      @media print {
+        .toolbar,
+        .colophon {
+          display: none;
+        }
+        html,
+        body {
+          background: #fff;
+          padding: 0;
+          margin: 0;
+          font-size: 9.4pt;
+        }
+        .page {
+          box-shadow: none;
+          max-width: 100%;
+          padding: 0.35in 0.55in;
+        }
+        section,
+        .entry,
+        .proj,
+        .grid2 {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+        @page {
+          margin: 0;
+          size: letter;
+        }
+      }
+      @media (max-width: 640px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .contact {
+          text-align: left;
+          white-space: normal;
+        }
+        .name {
+          font-size: 27pt;
+        }
+        .grid2 {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .page {
+          padding: 34px 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="toolbar">
+      <a class="toolbar-back" href="/">← blakeganderson.com</a>
+      <a
+        class="toolbar-download"
+        href="/Blake_Anderson_Resume.pdf"
+        download="Blake_Anderson_Resume.pdf"
+        >Download PDF</a
+      >
+    </nav>
+    <div class="page">
+      <header>
+        <div>
+          <h1 class="name">Blake Anderson</h1>
+          <p class="role">Design Engineer</p>
+        </div>
+        <address class="contact">
+          <div class="primary">
+            <a href="https://blakeganderson.com">blakeganderson.com</a>
+          </div>
+          <div>
+            <a href="mailto:bganderson95@gmail.com">bganderson95@gmail.com</a>
+          </div>
+          <div>(540) 597-5447 · Richmond, VA</div>
+        </address>
+      </header>
+
+      <p class="summary">
+        Design engineer who works across
+        <strong>visual design, frontend craft, and product thinking</strong>,
+        shipping interfaces end-to-end, from type, spacing, and interaction
+        detail to production React.
+      </p>
+
+      <section>
+        <div class="sec-head">
+          <h2>Experience</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="entry">
+          <div class="org">
+            <h3 class="org-name">The Washington Post</h3>
+          </div>
+          <div class="role-row">
+            <h4 class="title">Staff Software Engineer</h4>
+            <span class="dates">Aug 2025 - Present</span>
+          </div>
+          <ul>
+            <li>
+              Design and own the React component ecosystem (70+ packages) for
+              Arc XP, the Post's publishing platform, defining the look and
+              feel of hundreds of sites at hundreds of millions of monthly
+              pageviews.
+            </li>
+            <li>
+              Built visual regression testing with Playwright and Chromatic into
+              the deploy pipeline, holding a consistent visual bar across the
+              whole system.
+            </li>
+            <li>
+              Built an LLM-driven UI generation workflow (AWS Bedrock, Lambda)
+              that turns structured inputs into five production-ready frontend
+              artifact types in under a minute.
+            </li>
+          </ul>
+          <div class="sub-role">
+            <span>Senior Software Engineer</span
+            ><span class="dates">Apr 2022 - Aug 2025</span>
+          </div>
+          <ul>
+            <li>
+              Designed a 3-layer design-token pipeline (global primitives,
+              semantic aliases, breakpoint overrides) that compiles JSON
+              definitions into production CSS across the design system.
+            </li>
+            <li>
+              Designed and built the homepage, footer, and search UI for
+              dev.arcxp.com, a public developer documentation site.
+            </li>
+            <li>
+              Added keyboard navigation, ARIA, and RTL support throughout
+              the component library.
+            </li>
+            <li>
+              Led a 4-person team to design and build an internal developer
+              Community Hub, setting the vision and providing design and
+              technical direction from wireframes through delivery.
+            </li>
+          </ul>
+          <div class="sub-role">
+            <span>Software Engineer</span
+            ><span class="dates">Jun 2021 - Apr 2022</span>
+          </div>
+          <ul>
+            <li>
+              Restyled Arc's developer documentation typography and formatting
+              for readability, wireframed an internal launch-operations site,
+              and ran launch-gate code reviews for 7 client site launches.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="org"><h3 class="org-name">IBM</h3></div>
+          <div class="role-row">
+            <h4 class="title">
+              Technical Consultant → Senior Technical Consultant
+            </h4>
+            <span class="dates">Sep 2017 - Jun 2021</span>
+          </div>
+          <ul>
+            <li>
+              Served as UX designer and frontend engineer for a U.S. Navy
+              research analysis platform, owning the interface end-to-end
+              from proof-of-concept wireframes to production React
+              components.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>Selected Projects</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="proj">
+          <h3 class="proj-name">
+            HYBRD
+            <a href="https://www.blakeganderson.com/projects/hybrd-fitness-app"
+              >view →</a
+            >
+          </h3>
+          <p>
+            Wireframed and prototyped a fitness app in high fidelity (accepted
+            into Y Combinator), then shipped a production React Native feature
+            with a custom animation component.
+          </p>
+        </div>
+
+        <div class="proj">
+          <h3 class="proj-name">
+            Figma Design Token Exporter
+            <a
+              href="https://github.com/bganderson95/figma-design-token-exporter"
+              >view →</a
+            >
+          </h3>
+          <p>
+            Open-source Figma plugin that translates Figma Variables into Arc
+            XP's token bundle format, connecting design-system definitions
+            directly to production token architecture. Designed and shipped solo.
+          </p>
+        </div>
+
+      </section>
+
+      <div class="grid2">
+        <section style="margin-bottom: 0">
+          <div class="sec-head">
+            <h2>Education</h2>
+            <div class="line"></div>
+          </div>
+          <h3 class="edu-org">University of Virginia</h3>
+          <div class="edu-sub">B.S. Systems Engineering · B.A. Economics</div>
+          <div class="edu-year">SCHOOL OF ENGINEERING · 2017</div>
+        </section>
+
+        <section style="margin-bottom: 0">
+          <div class="sec-head">
+            <h2>Toolkit</h2>
+            <div class="line"></div>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Design</span>
+            <span class="skill-val"
+              >UX/UI design, Figma, design systems, typography, wireframing,
+              Illustrator</span
+            >
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Engineering</span>
+            <span class="skill-val"
+              >React, TypeScript, CSS/Sass, Storybook, Chromatic,
+              animation</span
+            >
+          </div>
+        </section>
+      </div>
+    </div>
+    <p class="colophon">
+      This resume is written in semantic HTML &amp; CSS —
+      <a
+        href="https://github.com/bganderson95/Blake-portfolio/blob/main/public/resume/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        >view source</a
+      >.
+    </p>
+  </body>
+</html>

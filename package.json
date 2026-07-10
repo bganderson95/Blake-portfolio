@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "resume:pdf": "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --no-pdf-header-footer --virtual-time-budget=8000 --print-to-pdf=public/Blake_Anderson_Resume.pdf public/resume/index.html"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

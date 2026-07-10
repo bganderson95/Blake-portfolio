@@ -15,13 +15,7 @@ export function Footer() {
           >
             GitHub
           </a>
-          <a
-            href="/Blake_Anderson_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
+          <a href="/resume/">Resume</a>
         </nav>
         <p className="footer-copy">
           © {new Date().getFullYear()} Blake Anderson

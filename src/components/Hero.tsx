@@ -22,13 +22,8 @@ export function Hero() {
           that help teams ship better digital products.
         </p>
         <div className="hero-actions">
-          <a
-            href="/Blake_Anderson_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary btn--sm"
-          >
-            Download Resume
+          <a href="/resume/" className="btn btn-secondary btn--sm">
+            View Resume
           </a>
         </div>
         <div className={`hero-skills fade-up${loaded ? ' visible' : ''}`} style={{ transitionDelay: '280ms' }}>
