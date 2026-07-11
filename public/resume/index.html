@@ -55,11 +55,17 @@
         max-width: var(--measure);
         margin: 0 auto;
         background: var(--paper);
-        aspect-ratio: 8.5 / 11; /* US letter proportions, like the PDF */
         padding: 44px 54px 40px;
         box-shadow:
           0 1px 3px rgba(0, 0, 0, 0.06),
           0 8px 30px rgba(0, 0, 0, 0.05);
+      }
+      /* US letter proportions, like the PDF. Wide screens only: iOS Safari
+         won't grow an aspect-ratio box to fit overflowing content */
+      @media screen and (min-width: 800px) {
+        .page {
+          aspect-ratio: 8.5 / 11;
+        }
       }
 
       /* ---- Header ---- */
@@ -365,7 +371,6 @@
         .page {
           box-shadow: none;
           max-width: 100%;
-          aspect-ratio: auto;
           padding: 0.35in 0.55in;
         }
         section { margin-bottom: 20px; }
