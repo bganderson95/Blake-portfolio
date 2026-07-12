@@ -16,7 +16,8 @@ function HomePage() {
   useEffect(() => {
     if (!hash) return
     const el = document.querySelector(hash)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (el) el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })
   }, [hash])
 
   return (

@@ -65,7 +65,7 @@ export function ParcelPage() {
         <h2 className="project-section-title">Branding</h2>
         <div className="hybrd-logo-breakdown">
           <div className="hybrd-logo-img-wrap" style={{ background: '#f0ede8' }}>
-            <img src="/gallery/Parcel-logo.svg" alt="Parcel logo" />
+            <img src="/gallery/parcel-logo.svg" alt="Parcel logo" />
           </div>
           <div className="hybrd-logo-details">
             {logoBreakdown.map(({ label, text }) => (
@@ -85,7 +85,7 @@ export function ParcelPage() {
             Rather than treat this as a pure thought experiment, I built a working technical prototype to validate the core mechanics: could a Chrome extension detect a paywalled article, authenticate a user, process a microtransaction, and unlock access, all within the browser?
           </p>
           <div className="hybrd-dev-video">
-            <img src="/projects/parcel/Parcel Screen.png" alt="Parcel extension UI" style={{ borderRadius: 16, width: '100%' }} />
+            <img src="/projects/parcel/parcel-screen.png" alt="Parcel extension UI" style={{ borderRadius: 16, width: '100%' }} />
           </div>
         </div>
       </section>

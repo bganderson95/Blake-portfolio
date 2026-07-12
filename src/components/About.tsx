@@ -39,7 +39,7 @@ export function About() {
               style={{ transitionDelay: "120ms" }}
             >
               <img
-                src="/about/Blake_Anderson_Headshot.png"
+                src="/about/blake-anderson-headshot.png"
                 alt="Blake Anderson"
                 className="about-photo"
                 loading="lazy"
@@ -69,9 +69,9 @@ export function About() {
                 </p>
                 <p>
                   I now live in Richmond, VA with my wife{" "}
-                  <HoverPic name="Rebecca" src="/about/Rebecca.jpg" />, my goofy dog{" "}
-                  <HoverPic name="Freddie" src="/about/Freddie.jpeg" />, and my toothless cat{" "}
-                  <HoverPic name="Penny" src="/about/Penny.jpeg" />. When I'm not
+                  <HoverPic name="Rebecca" src="/about/rebecca.jpg" />, my goofy dog{" "}
+                  <HoverPic name="Freddie" src="/about/freddie.jpeg" />, and my toothless cat{" "}
+                  <HoverPic name="Penny" src="/about/penny.jpeg" />. When I'm not
                   at work, you can find me running, taking art classes at my
                   local art museum, playing golf, or going for a hike!
                 </p>

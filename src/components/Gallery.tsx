@@ -52,7 +52,9 @@ function GalleryItem({ item, index, onOpen }: { item: Item; index: number; onOpe
     )
     observer.observe(el)
 
-    VanillaTilt.init(el, { max: 7, speed: 500, glare: false, scale: 1.02 })
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      VanillaTilt.init(el, { max: 7, speed: 500, glare: false, scale: 1.02 })
+    }
 
     return () => {
       observer.disconnect()

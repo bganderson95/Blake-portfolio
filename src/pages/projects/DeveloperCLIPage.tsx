@@ -53,7 +53,14 @@ export function DeveloperCLIPage() {
       <section className="project-section">
         <h2 className="project-section-title">In Action</h2>
         <div className="cli-gif-wrap">
-          <img src="/projects/arcxp-cli/arcxp-cli.gif" alt="Arc XP CLI demo" />
+          <video
+            src="/projects/arcxp-cli/arcxp-cli.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-label="Arc XP CLI demo"
+          />
         </div>
       </section>
 

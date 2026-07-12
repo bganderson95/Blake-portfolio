@@ -36,7 +36,7 @@ export function HYBRDPage() {
         <h2 className="project-section-title">Branding</h2>
         <div className="hybrd-logo-breakdown">
           <div className="hybrd-logo-img-wrap">
-            <img src="/gallery/Hybrd Logo Transparent.png" alt="HYBRD logo" />
+            <img src="/gallery/hybrd-logo-transparent.png" alt="HYBRD logo" />
           </div>
           <div className="hybrd-logo-details">
             {logoBreakdown.map(({ label, text }) => (
@@ -88,7 +88,7 @@ export function HYBRDPage() {
           </div>
           <div className="hybrd-dev-video">
             <video
-              src="/projects/hybrd/ScreenRecording_06-02-2026 13-02-09_1.mov"
+              src="/projects/hybrd/hybrd-benchmark-demo.mp4"
               autoPlay
               loop
               muted

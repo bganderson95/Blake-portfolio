@@ -1052,7 +1052,8 @@ section[id] { scroll-margin-top: 80px; }
   justify-content: center;
 }
 
-.cli-gif-wrap img {
+.cli-gif-wrap img,
+.cli-gif-wrap video {
   width: 100%;
   max-width: 720px;
   border-radius: 12px;
@@ -1516,4 +1517,17 @@ section[id] { scroll-margin-top: 80px; }
 @keyframes modal-scale {
   from { transform: scale(0.96); opacity: 0; }
   to   { transform: scale(1);    opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
