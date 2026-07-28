@@ -13,13 +13,14 @@ export function Hero() {
   return (
     <section className="hero" id="top">
       <div className={`hero-inner container${loaded ? ' hero-loaded' : ''}`}>
-        <span className="hero-eyebrow">Software Engineer</span>
+        <span className="hero-eyebrow">Design Engineer</span>
         <h1 className="hero-name">
           Blake<br />Anderson
         </h1>
         <p className="hero-tagline">
-          I build frontend systems, developer tools, and thoughtful interfaces
-          that help teams ship better digital products.
+          I build component systems used by dozens of media organizations
+          across hundreds of their sites, from the design tokens to the
+          production code.
         </p>
         <div className="hero-actions">
           <a href="/resume/" className="btn btn-secondary btn--sm">

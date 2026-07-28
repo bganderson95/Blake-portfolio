@@ -16,7 +16,7 @@ export const projects: Project[] = [
     company: 'The Washington Post / Arc XP',
     role: 'Senior → Staff Software Engineer',
     description:
-      'Owned a library of 70+ React npm packages that power the Arc Themes block system, used by hundreds of news publishers worldwide. Work spanned component architecture, a design token pipeline that compiled JSON tokens into production CSS, the admin UI for site-wide configuration, and visual quality through Storybook documentation and Chromatic regression testing.',
+      'Owned a library of 70+ React npm packages that power the Arc Themes block system, used by dozens of news publishers across hundreds of sites worldwide. Work spanned component architecture, a design token pipeline that compiled JSON tokens into production CSS, the admin UI for site-wide configuration, and visual quality through Storybook documentation and Chromatic regression testing.',
     disciplines: ['Design Systems', 'Front-End Development'],
     tags: ['React', 'JavaScript', 'CSS', 'Design Tokens', 'Storybook', 'Chromatic', 'npm'],
     link: 'https://github.com/WPMedia/arc-themes-blocks',

@@ -15,7 +15,7 @@ const contributions = [
   },
   {
     label: 'Admin UI',
-    text: 'Owned the PageBuilder editor UI that lets publishers configure blocks and page templates without code. Responsible for making complex layout and style controls feel approachable for non-technical users across hundreds of newsrooms.',
+    text: 'Owned the PageBuilder editor UI that lets publishers configure blocks and page templates without code. Responsible for making complex layout and style controls feel approachable for non-technical users across dozens of newsrooms.',
   },
   {
     label: 'Visual quality',
@@ -42,12 +42,12 @@ const contributions = [
 export function ArcXPPage() {
   usePageMeta(
     'Arc Themes Blocks — Design Systems | Blake Anderson',
-    'Owned a 70+ package React design system used by hundreds of news publishers — design token pipeline, component architecture, and visual quality via Storybook and Chromatic.'
+    'Owned a 70+ package React design system used by dozens of news publishers across hundreds of sites — design token pipeline, component architecture, and visual quality via Storybook and Chromatic.'
   )
   return (
     <ProjectLayout project={project}>
       <p className="project-page-description">
-        Arc Themes Blocks is the component system at the heart of Arc XP's publishing platform, used by hundreds of media organizations — including The Washington Post, the Chicago Tribune, and news publishers across Europe, Latin America, and Asia — to build and manage their digital products. I owned the block library across its full lifecycle: architecture, token pipeline, admin UI, visual testing, and multi-team release coordination.
+        Arc Themes Blocks is the component system at the heart of Arc XP's publishing platform, used by dozens of media organizations — including The Washington Post, the Chicago Tribune, and news publishers across Europe, Latin America, and Asia — to build and manage hundreds of sites. I owned the block library across its full lifecycle: architecture, token pipeline, admin UI, visual testing, and multi-team release coordination.
       </p>
 
       <section className="project-section">

@@ -53,10 +53,11 @@ export function About() {
               <div className="about-bio">
                 <p>
                   Hey, I'm Blake. I'm a staff software engineer at The Washington Post,
-                  where I work on Arc XP, a publishing platform used by hundreds of
+                  where I work on Arc XP, a publishing platform used by dozens of
                   media organizations around the world. I spend most of my time
-                  building React component libraries, developer tooling, and frontend
-                  systems that help teams ship better digital products.
+                  building the component systems those organizations use across
+                  hundreds of their sites, from the design tokens to the
+                  production code.
                 </p>
                 <p>
                   I came up through systems engineering and economics at UVA, got my
