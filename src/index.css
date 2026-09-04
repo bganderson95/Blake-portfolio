@@ -19,13 +19,18 @@
      tint. The raw accent is too light for 12px type in several themes
      (snowspeeder hit 2.7:1); this keeps the hue but clears 4.5:1 in all six.
      Defined once — it re-resolves per theme because the inputs do. */
-  --clr-accent-ink: color-mix(in srgb, var(--clr-accent) 62%, var(--clr-text-1));
+  --clr-accent-ink: color-mix(
+    in srgb,
+    var(--clr-accent) 62%,
+    var(--clr-text-1)
+  );
 
   /* Typography */
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   /* Display face for headings only; body copy stays on --font-sans. Point
      this at var(--font-sans) to revert everything in one line. */
-  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
 
   /* Layout */
@@ -190,6 +195,11 @@
 
 body {
   margin: 0;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--clr-accent) 30%, var(--clr-bg));
+  color: var(--clr-text-1);
 }
 
 .page-bg {
