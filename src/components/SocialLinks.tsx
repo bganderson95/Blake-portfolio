@@ -26,10 +26,14 @@ function GitHubIcon() {
   )
 }
 
-function BehanceIcon() {
+function ResumeIcon() {
   return (
-    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M7.5 4H2v16h5.8c2.7 0 4.7-1.7 4.7-4.4 0-1.5-.7-2.9-1.9-3.6.9-.8 1.4-2 1.4-3C12 6.3 10 4 7.5 4zm-.3 6.2H5V7h2.2c.9 0 1.5.6 1.5 1.6s-.6 1.6-1.5 1.6zM5 17v-4h2.8c1 0 1.7.8 1.7 2s-.7 2-1.7 2H5zM17.5 8C15 8 13 10 13 12.5S15 17 17.5 17c2.1 0 3.7-1.1 4.3-2.8h-2.5c-.3.5-.9.8-1.8.8-1.1 0-1.9-.7-2-1.8H22v-.5c0-2.6-1.9-4.7-4.5-4.7zm-2 4c.2-1.1 1-1.8 2-1.8s1.8.7 1.9 1.8h-3.9zM15 5v1.5h5V5h-5z" />
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+      <path d="M14 2v6h6" />
+      <path d="M16 13H8" />
+      <path d="M16 17H8" />
+      <path d="M10 9H8" />
     </svg>
   )
 }
@@ -38,7 +42,7 @@ const links = [
   { label: 'Email',    href: 'mailto:bganderson95@gmail.com',              icon: <EmailIcon /> },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/blakeganderson',  icon: <LinkedInIcon /> },
   { label: 'GitHub',   href: 'https://github.com/blakeganderson',           icon: <GitHubIcon /> },
-  { label: 'Behance',  href: 'https://www.behance.net/bganderson',          icon: <BehanceIcon /> },
+  { label: 'Resume',   href: '/resume/',                                    icon: <ResumeIcon /> },
 ]
 
 export function SocialLinks() {

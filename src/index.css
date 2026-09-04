@@ -5,32 +5,32 @@
 :root {
   color-scheme: light;
   /* Palette — sifnos */
-  --clr-bg:         #fef5ec;
-  --clr-surface:    #ffffff;
-  --clr-text-1:     #1a0e06;
-  --clr-text-2:     #7a5a3a;
-  --clr-text-3:     #b89a70;
-  --clr-border:     #ecdfc8;
-  --clr-border-2:   #d8c4a0;
-  --clr-accent:     #0d7a70;
-  --clr-accent-bg:  rgba(13, 122, 112, 0.08);
+  --clr-bg: #fef5ec;
+  --clr-surface: #ffffff;
+  --clr-text-1: #1a0e06;
+  --clr-text-2: #7a5a3a;
+  --clr-text-3: #b89a70;
+  --clr-border: #ecdfc8;
+  --clr-border-2: #d8c4a0;
+  --clr-accent: #0d7a70;
+  --clr-accent-bg: rgba(13, 122, 112, 0.08);
 
   /* Typography */
-  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
 
   /* Layout */
-  --max-w:      1100px;
-  --pad-x:      clamp(20px, 5vw, 48px);
+  --max-w: 1100px;
+  --pad-x: clamp(20px, 5vw, 48px);
   --section-py: clamp(80px, 10vw, 140px);
 
   /* Easing */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Radius */
-  --r-sm:   6px;
-  --r-md:   12px;
-  --r-lg:   20px;
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
   --r-full: 100px;
 
   font-family: var(--font-sans);
@@ -47,14 +47,14 @@
   :root {
     color-scheme: dark;
     /* Palette — ursula */
-    --clr-bg:        #0c0814;
-    --clr-surface:   #140f20;
-    --clr-text-1:    #e8e0f8;
-    --clr-text-2:    #9080c0;
-    --clr-text-3:    #584880;
-    --clr-border:    #1a1228;
-    --clr-border-2:  #241a38;
-    --clr-accent:    #f43f5e;
+    --clr-bg: #0c0814;
+    --clr-surface: #140f20;
+    --clr-text-1: #e8e0f8;
+    --clr-text-2: #9080c0;
+    --clr-text-3: #584880;
+    --clr-border: #1a1228;
+    --clr-border-2: #241a38;
+    --clr-accent: #f43f5e;
     --clr-accent-bg: rgba(244, 63, 94, 0.12);
   }
 }
@@ -64,35 +64,38 @@
    ========================================================================== */
 
 .theme-transitioning * {
-  transition: background-color 0.35s ease, color 0.35s ease,
-    border-color 0.35s ease, box-shadow 0.35s ease !important;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease !important;
 }
 
 /* Sifnos — warm cream bg, deep teal accent */
 [data-theme="sifnos"] {
   color-scheme: light;
-  --clr-bg:        #fef5ec;
-  --clr-surface:   #ffffff;
-  --clr-text-1:    #1a0e06;
-  --clr-text-2:    #7a5a3a;
-  --clr-text-3:    #b89a70;
-  --clr-border:    #ecdfc8;
-  --clr-border-2:  #d8c4a0;
-  --clr-accent:    #0d7a70;
+  --clr-bg: #fef5ec;
+  --clr-surface: #ffffff;
+  --clr-text-1: #1a0e06;
+  --clr-text-2: #7a5a3a;
+  --clr-text-3: #b89a70;
+  --clr-border: #ecdfc8;
+  --clr-border-2: #d8c4a0;
+  --clr-accent: #0d7a70;
   --clr-accent-bg: rgba(13, 122, 112, 0.08);
 }
 
 /* Ursula — dark purple-black bg, vivid rose accent */
 [data-theme="ursula"] {
   color-scheme: dark;
-  --clr-bg:        #0c0814;
-  --clr-surface:   #140f20;
-  --clr-text-1:    #e8e0f8;
-  --clr-text-2:    #9080c0;
-  --clr-text-3:    #584880;
-  --clr-border:    #1a1228;
-  --clr-border-2:  #241a38;
-  --clr-accent:    #f43f5e;
+  --clr-bg: #0c0814;
+  --clr-surface: #140f20;
+  --clr-text-1: #e8e0f8;
+  --clr-text-2: #9080c0;
+  --clr-text-3: #584880;
+  --clr-border: #1a1228;
+  --clr-border-2: #241a38;
+  --clr-accent: #f43f5e;
   --clr-accent-bg: rgba(244, 63, 94, 0.12);
 }
 
@@ -113,56 +116,56 @@
 /* Wahoowa — dark teal-navy bg, coral accent */
 [data-theme="wahoowa"] {
   color-scheme: dark;
-  --clr-bg:        #071520;
-  --clr-surface:   #0c2030;
-  --clr-text-1:    #c8e8ee;
-  --clr-text-2:    #5098a8;
-  --clr-text-3:    #306878;
-  --clr-border:    #102840;
-  --clr-border-2:  #183850;
-  --clr-accent:    #ff7050;
+  --clr-bg: #071520;
+  --clr-surface: #0c2030;
+  --clr-text-1: #c8e8ee;
+  --clr-text-2: #5098a8;
+  --clr-text-3: #306878;
+  --clr-border: #102840;
+  --clr-border-2: #183850;
+  --clr-accent: #ff7050;
   --clr-accent-bg: rgba(255, 112, 80, 0.12);
 }
 
 /* Snowspeeder — pale ice blue bg, burnt orange accent */
 [data-theme="snowspeeder"] {
   color-scheme: light;
-  --clr-bg:        #e6eff9;
-  --clr-surface:   #f4f8fe;
-  --clr-text-1:    #091828;
-  --clr-text-2:    #385878;
-  --clr-text-3:    #7090b0;
-  --clr-border:    #c4d4e8;
-  --clr-border-2:  #a8bcd8;
-  --clr-accent:    #d47010;
+  --clr-bg: #e6eff9;
+  --clr-surface: #f4f8fe;
+  --clr-text-1: #091828;
+  --clr-text-2: #385878;
+  --clr-text-3: #7090b0;
+  --clr-border: #c4d4e8;
+  --clr-border-2: #a8bcd8;
+  --clr-accent: #d47010;
   --clr-accent-bg: rgba(212, 112, 16, 0.08);
 }
 
 /* Curaçao — butter yellow bg, vivid pink accent, royal blue stripe details */
 [data-theme="curacao"] {
   color-scheme: light;
-  --clr-bg:        #f3eecc;
-  --clr-surface:   #fdfdf5;
-  --clr-text-1:    #0a1e3c;
-  --clr-text-2:    #1a5498;
-  --clr-text-3:    #3868a8;
-  --clr-border:    #e4d070;
-  --clr-border-2:  #ccb840;
-  --clr-accent:    #cc1468;
-  --clr-accent-bg: rgba(204, 20, 104, 0.10);
+  --clr-bg: #f3eecc;
+  --clr-surface: #fdfdf5;
+  --clr-text-1: #0a1e3c;
+  --clr-text-2: #1a5498;
+  --clr-text-3: #3868a8;
+  --clr-border: #e4d070;
+  --clr-border-2: #ccb840;
+  --clr-accent: #cc1468;
+  --clr-accent-bg: rgba(204, 20, 104, 0.1);
 }
 
 /* Ewok — near-black warm bg, amber flame accent */
 [data-theme="ewok"] {
   color-scheme: dark;
-  --clr-bg:        #0e0a06;
-  --clr-surface:   #181208;
-  --clr-text-1:    #f5ede0;
-  --clr-text-2:    #a08060;
-  --clr-text-3:    #706040;
-  --clr-border:    #241a0e;
-  --clr-border-2:  #302010;
-  --clr-accent:    #e8780a;
+  --clr-bg: #0e0a06;
+  --clr-surface: #181208;
+  --clr-text-1: #f5ede0;
+  --clr-text-2: #a08060;
+  --clr-text-3: #706040;
+  --clr-border: #241a0e;
+  --clr-border-2: #302010;
+  --clr-accent: #e8780a;
   --clr-accent-bg: rgba(232, 120, 10, 0.12);
 }
 
@@ -170,9 +173,15 @@
    BASE RESET
    ========================================================================== */
 
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-body { margin: 0; }
+body {
+  margin: 0;
+}
 
 .page-bg {
   position: fixed;
@@ -182,7 +191,9 @@ body { margin: 0; }
   pointer-events: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 500;
   line-height: 1.1;
@@ -190,11 +201,21 @@ h1, h2, h3 {
   color: var(--clr-text-1);
 }
 
-p   { margin: 0; }
-a   { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
+p {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
 
-section[id] { scroll-margin-top: 80px; }
+section[id] {
+  scroll-margin-top: 80px;
+}
 
 /* ==========================================================================
    LAYOUT
@@ -215,7 +236,7 @@ section[id] { scroll-margin-top: 80px; }
   opacity: 0;
   transform: translateY(22px);
   transition:
-    opacity  0.65s var(--ease-out),
+    opacity 0.65s var(--ease-out),
     transform 0.65s var(--ease-out);
 }
 
@@ -265,7 +286,11 @@ section[id] { scroll-margin-top: 80px; }
   cursor: pointer;
   border: none;
   text-decoration: none;
-  transition: opacity 0.18s, transform 0.18s var(--ease-out), background 0.18s, border-color 0.18s;
+  transition:
+    opacity 0.18s,
+    transform 0.18s var(--ease-out),
+    background 0.18s,
+    border-color 0.18s;
   white-space: nowrap;
   -webkit-user-select: none;
   user-select: none;
@@ -315,7 +340,10 @@ section[id] { scroll-margin-top: 80px; }
   border-radius: var(--r-sm);
   border: 1px solid var(--clr-border);
   color: var(--clr-text-3);
-  transition: border-color 0.15s, color 0.15s, transform 0.2s var(--ease-out);
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    transform 0.2s var(--ease-out);
 }
 
 .social-link:hover {
@@ -371,7 +399,9 @@ section[id] { scroll-margin-top: 80px; }
   border-radius: 100px;
   border-color: var(--clr-border);
   background: color-mix(in srgb, var(--clr-bg) 52%, transparent);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.16),
+    0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .nav-inner {
@@ -390,7 +420,9 @@ section[id] { scroll-margin-top: 80px; }
   color: var(--clr-accent);
   transition: opacity 0.15s;
 }
-.nav-logo:hover { opacity: 0.7; }
+.nav-logo:hover {
+  opacity: 0.7;
+}
 
 .nav-logo-svg {
   width: 36px;
@@ -404,7 +436,9 @@ section[id] { scroll-margin-top: 80px; }
   gap: 28px;
 }
 
-.nav-links-mobile { display: none; }
+.nav-links-mobile {
+  display: none;
+}
 
 .nav-links a {
   font-size: 13.5px;
@@ -412,8 +446,12 @@ section[id] { scroll-margin-top: 80px; }
   color: var(--clr-text-2);
   transition: color 0.15s;
 }
-.nav-links a:hover { color: var(--clr-text-1); }
-.nav-links a.active { color: var(--clr-accent); }
+.nav-links a:hover {
+  color: var(--clr-text-1);
+}
+.nav-links a.active {
+  color: var(--clr-accent);
+}
 
 .nav-theme-btn {
   display: flex;
@@ -428,7 +466,10 @@ section[id] { scroll-margin-top: 80px; }
   color: var(--clr-text-2);
   cursor: pointer;
   flex-shrink: 0;
-  transition: border-color 0.15s, color 0.15s, transform 0.2s var(--ease-out);
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    transform 0.2s var(--ease-out);
 }
 .nav-theme-btn:hover {
   border-color: var(--clr-accent);
@@ -459,7 +500,10 @@ section[id] { scroll-margin-top: 80px; }
   border-radius: var(--r-sm);
   color: var(--clr-text-2);
   white-space: nowrap;
-  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    transform 0.15s;
 }
 .nav-resume:hover {
   border-color: var(--clr-accent);
@@ -482,97 +526,654 @@ section[id] { scroll-margin-top: 80px; }
 .hero-inner {
   position: relative;
   z-index: 1;
-  padding-block: clamp(100px, 14vw, 160px);
+  padding-block: clamp(90px, 12vw, 140px);
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: clamp(40px, 5vw, 72px);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 /* Entrance — elements start hidden, transition in on .hero-loaded */
 .hero-eyebrow,
 .hero-name,
-.hero-tagline,
-.hero-actions {
+.hero-tagline {
   opacity: 0;
   transform: translateY(18px);
   will-change: opacity, transform;
   transition:
-    opacity  0.75s var(--ease-out),
+    opacity 0.75s var(--ease-out),
     transform 0.75s var(--ease-out);
 }
 
-.hero-loaded .hero-eyebrow  { opacity: 1; transform: none; transition-delay: 0ms; }
-.hero-loaded .hero-name     { opacity: 1; transform: none; transition-delay: 90ms; }
-.hero-loaded .hero-tagline  { opacity: 1; transform: none; transition-delay: 180ms; }
-.hero-loaded .hero-actions  { opacity: 1; transform: none; transition-delay: 270ms; }
-
+.hero-loaded .hero-eyebrow {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0ms;
+}
+.hero-loaded .hero-name {
+  opacity: 1;
+  transform: none;
+  transition-delay: 90ms;
+}
+.hero-loaded .hero-tagline {
+  opacity: 1;
+  transform: none;
+  transition-delay: 180ms;
+}
 .hero-eyebrow {
   display: inline-block;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.20em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--clr-accent);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .hero-name {
-  font-size: clamp(72px, 12vw, 148px);
+  font-size: clamp(40px, 5.2vw, 58px);
   font-weight: 500;
-  letter-spacing: -0.045em;
-  line-height: 0.92;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
   color: var(--clr-text-1);
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 
 .hero-tagline {
-  max-width: 520px;
-  font-size: clamp(16px, 2vw, 19px);
+  max-width: 460px;
+  font-size: clamp(15.5px, 1.6vw, 17.5px);
   line-height: 1.6;
   color: var(--clr-text-2);
-  margin-bottom: 44px;
+  margin-bottom: 36px;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+/* ==========================================================================
+   HERO STAGE — "a design system assembling itself"
+
+   Three beats (see HeroStage.tsx for the TIMING/EASING config, which is
+   piped in here as --hero-* custom properties on .hero-stage): the token
+   icons stagger in over a plain, unstyled button → each token pulses, its
+   CSS line types in, and one property lands on the button (fill → surface,
+   radius → corners, space → padding, accent → accent) → the finished
+   button settles. Then it just holds; it's a real button that cycles the
+   site's themes.
+
+   Entrances, pulses and the settle are transform/opacity only. The four
+   property applications are the deliberate exception — they ARE the demo,
+   so border-radius and padding really do animate. Each is one one-shot
+   transition on one small element, so the cost is contained.
+
+   Colors always follow the site's real, current theme, and elements carry a
+   plain color transition so a theme change (from either theme button) also
+   crossfades here — via `transition-property` allowlists rather than `all`,
+   so it never touches layout-affecting properties unintentionally.
+   ========================================================================== */
+
+.hero-stage-wrap {
+  opacity: 0;
+  transform: translateY(18px) scale(0.99);
+  will-change: opacity, transform;
+  transition:
+    opacity 0.8s var(--ease-out),
+    transform 0.8s var(--ease-out);
 }
 
-/* Ambient background orbs */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+.hero-loaded .hero-stage-wrap {
+  opacity: 1;
+  transform: none;
+  transition-delay: 160ms;
+}
+
+.hero-stage {
+  /* The stage's width tracks its grid column, not the viewport — at ~950px
+     wide the hero is still two columns but the stage is squeezed to ~400px.
+     So its internal layout responds to its OWN width via a container query
+     below, rather than a viewport media query that would never fire here. */
+  container-type: inline-size;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--r-lg);
+  background: var(--clr-surface);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
-.hero-orb {
+.hero-stage-header {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+/* Replay control, opposite the filename. Quiet by default — it's a utility,
+   not part of the composition. Taken out of flow deliberately: at 24px it's
+   taller than the filename's line box, so in-flow it would drive the header's
+   height and push the bar ~4px taller than it was without it. */
+.hero-stage-replay {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  will-change: transform;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--clr-text-3);
+  cursor: pointer;
+  transition:
+    color 0.18s var(--hero-ease-press),
+    background-color 0.18s var(--hero-ease-press),
+    transform 0.18s var(--hero-ease-press);
 }
 
-.hero-orb-1 {
-  width: 700px; height: 700px;
-  top: -260px; right: -80px;
-  background: radial-gradient(circle at center, rgba(29, 78, 216, 0.10) 0%, transparent 70%);
-  animation: orb-drift-a 10s ease-in-out infinite;
+/* Keeps the icon visually small while giving it a real tap target. */
+.hero-stage-replay::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
 }
 
-.hero-orb-2 {
-  width: 500px; height: 500px;
-  bottom: -80px; right: 15%;
-  background: radial-gradient(circle at center, rgba(96, 165, 250, 0.08) 0%, transparent 70%);
-  animation: orb-drift-b 13s ease-in-out infinite;
+@media (hover: hover) and (pointer: fine) {
+  .hero-stage-replay:hover {
+    color: var(--clr-accent);
+    background: var(--clr-accent-bg);
+  }
 }
 
-@keyframes orb-drift-a {
-  0%, 100% { transform: translate(0, 0); }
-  50%       { transform: translate(-28px, 28px); }
+.hero-stage-replay:active {
+  transform: translateY(-50%) scale(0.92);
 }
 
-@keyframes orb-drift-b {
-  0%, 100% { transform: translate(0, 0); }
-  50%       { transform: translate(22px, -20px); }
+.hero-stage-replay:focus-visible {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 2px;
+}
+
+.hero-stage-replay-icon {
+  display: flex;
+}
+
+.hero-stage-replay-icon.spin {
+  animation: hero-replay-spin 520ms var(--hero-ease-out);
+}
+
+@keyframes hero-replay-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-stage-filename {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--clr-text-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero-stage-role {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.hero-stage-body {
+  display: grid;
+  /* The code column gets the wider share — the longest line,
+     `border-radius: var(--btn-radius);`, has to sit on one line, not wrap.
+     The visual column's floor is set by the token tray, whose width comes
+     from the labels ("radius", "accent"), not the 22px icons — 150px was too
+     low and let the tray overflow and clip. */
+  grid-template-columns: minmax(212px, 1.35fr) minmax(190px, 1fr);
+  gap: 16px;
+  /* Slightly more above than below: the code block's leading makes its first
+     line sit visually low, so even padding reads as top-heavy. */
+  padding: 30px 20px 16px;
+}
+
+/* Below this the code column drops under ~250px and `border-radius:
+   var(--btn-radius);` starts wrapping, so stack instead and give each row the
+   stage's full width. Keyed to the stage, so it fires whether the squeeze
+   comes from a narrow viewport or a narrow hero column. */
+@container (max-width: 500px) {
+  .hero-stage-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Code pane ---- */
+
+.hero-code-pane {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.8;
+  color: var(--clr-text-2);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.hero-code-line {
+  display: block;
+}
+
+/* Lines type in character by character (see TypedText in HeroStage.tsx), so
+   they need no fade — but each one always occupies its row from the start,
+   which keeps the block from reflowing as it fills in. */
+.hero-code-token {
+  min-height: 1.8em;
+}
+
+/* The line lights up the moment it finishes typing — which is the same
+   moment its property lands on the button. The code/visual sync, made
+   visible. */
+.hero-code-token.done {
+  animation: hero-code-land var(--hero-land-ms) var(--hero-ease-out);
+}
+
+.hero-code-caret {
+  display: inline-block;
+  width: 1px;
+  height: 1.05em;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  background: var(--clr-accent);
+}
+
+@keyframes hero-code-land {
+  0% {
+    color: var(--clr-accent);
+  }
+  55% {
+    color: var(--clr-accent);
+  }
+  100% {
+    color: var(--clr-text-2);
+  }
+}
+
+.hero-code-sel {
+  color: var(--clr-text-1);
+  font-weight: 600;
+}
+
+.hero-code-key {
+  color: var(--clr-text-1);
+  font-weight: 500;
+}
+
+.hero-code-val {
+  color: var(--clr-accent);
+}
+
+/* ---- Visual pane ---- */
+
+/* The tray is anchored to the top of the code block (rather than floating
+   centered in the row), and the button follows a fixed beat below it — close
+   enough to still read as a pair, with the leftover space collecting at the
+   bottom instead of wedging itself between the two. */
+.hero-stage-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 48px;
+  min-height: 160px;
+}
+
+/* ---- Token tray ---- */
+
+.hero-token-tray {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(14px, 4%, 26px);
+}
+
+.hero-token {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(-6px) scale(0.96);
+  will-change: opacity, transform;
+  transition:
+    opacity var(--hero-token-ms) var(--hero-ease-out),
+    transform var(--hero-token-ms) var(--hero-ease-out);
+}
+
+.hero-token.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* A token stays lit once applied — it did its job, it isn't discarded. */
+.hero-token.active .hero-token-icon {
+  animation: hero-token-pulse var(--hero-pulse-ms) var(--hero-ease-out);
+  border-color: var(--clr-accent);
+}
+
+.hero-token.active .hero-token-label {
+  color: var(--clr-accent);
+}
+
+@keyframes hero-token-pulse {
+  0% {
+    transform: scale(1);
+  }
+  38% {
+    transform: scale(1.16);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* All four icons share one box and one 2px stroke weight, so the tray reads
+   as a set — `radius` sets the stroke weight the others match. */
+.hero-token-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--r-sm);
+  border: 2px solid var(--clr-border-2);
+  background: var(--clr-bg);
+  transition:
+    background-color 0.6s ease,
+    border-color 0.6s ease;
+}
+
+/* color: an "A" that sharpens from muted grey to full ink, the same move it
+   makes on the button. */
+.hero-token-icon--color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.hero-token-icon--color::before {
+  content: "A";
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--clr-text-3);
+  transition: color var(--hero-apply-ms) var(--hero-ease-apply);
+}
+
+.hero-token.active .hero-token-icon--color::before {
+  color: var(--clr-text-1);
+}
+
+/* accent starts as a blank rectangle and literally fills with the accent
+   colour, wiping up from the bottom. The wipe is a scaleY on a
+   pseudo-element, so it stays transform-only. */
+.hero-token-icon--accent {
+  position: relative;
+  overflow: hidden;
+  background: var(--clr-bg);
+}
+
+.hero-token-icon--accent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--clr-accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition:
+    transform var(--hero-apply-ms) var(--hero-ease-apply),
+    background-color 0.6s ease;
+}
+
+.hero-token.active .hero-token-icon--accent::after {
+  transform: scaleY(1);
+}
+
+/* radius: starts barely rounded, and the corner opens up as it applies —
+   the same move it makes on the button. (Re-declares the base colour
+   transitions because this rule replaces the shorthand.) */
+.hero-token-icon--radius {
+  background: transparent;
+  border-color: var(--clr-text-3);
+  border-radius: 3px;
+  transition:
+    border-radius var(--hero-apply-ms) var(--hero-ease-apply),
+    background-color 0.6s ease,
+    border-color 0.6s ease;
+}
+
+.hero-token.active .hero-token-icon--radius {
+  border-radius: var(--r-md) 3px 3px 3px;
+}
+
+/* space: two rules with a gap between them */
+.hero-token-icon--space {
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+/* space: the two rules sit close together and push apart as it applies.
+   The gap opens via translateY rather than top/bottom, so it stays
+   transform-only. */
+.hero-token-icon--space::before,
+.hero-token-icon--space::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  height: 2px;
+  background: var(--clr-text-3);
+  transition:
+    transform var(--hero-apply-ms) var(--hero-ease-apply),
+    background-color 0.6s ease;
+}
+
+.hero-token-icon--space::before {
+  top: 2px;
+  transform: translateY(5px);
+}
+
+.hero-token-icon--space::after {
+  bottom: 2px;
+  transform: translateY(-5px);
+}
+
+.hero-token.active .hero-token-icon--space::before,
+.hero-token.active .hero-token-icon--space::after {
+  background: var(--clr-accent);
+  transform: translateY(0);
+}
+
+/* accent: blank until it fills with the accent colour (see the wipe above) */
+
+.hero-token-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--clr-text-3);
+  letter-spacing: 0.02em;
+  transition: color 0.6s ease;
+}
+
+/* ---- The destination button ----
+
+   Starts as plain, unstyled-looking HTML: grey fill, square corners, cramped
+   padding, no accent. Each token adds one class, and each class changes
+   exactly one thing, so the cause and effect stays legible. */
+
+.hero-btn-slot {
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity var(--hero-token-ms) var(--hero-ease-out),
+    transform var(--hero-token-ms) var(--hero-ease-out);
+}
+
+.hero-btn-slot.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-btn {
+  /* The alias layer the code panel is showing. These are component-level
+     aliases resolved from the site's global tokens — the same shape as the
+     token pipeline the Arc XP case study describes, and the reason the code
+     panel can be read literally: the declarations it types out are the ones
+     applied below. */
+  --btn-text: var(--clr-text-1);
+  --btn-radius: var(--r-md);
+  --btn-space: 11px 18px;
+  --btn-accent: var(--clr-accent-bg);
+  --btn-accent-line: var(--clr-accent);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* "before" state: plain, unstyled-looking HTML — flat grey, square
+     corners, cramped padding, no accent anywhere. Mixed against the theme's
+     own ink/background so it reads as "default" in light and dark alike. */
+  padding: 3px 7px;
+  border-radius: 0;
+  background: color-mix(in srgb, var(--clr-text-1) 11%, var(--clr-bg));
+  border: 1px solid color-mix(in srgb, var(--clr-text-1) 30%, var(--clr-bg));
+  color: var(--clr-text-2);
+  box-shadow: none;
+
+  transition:
+    background-color var(--hero-apply-ms) var(--hero-ease-apply),
+    border-color var(--hero-apply-ms) var(--hero-ease-apply),
+    color var(--hero-apply-ms) var(--hero-ease-apply),
+    border-radius var(--hero-apply-ms) var(--hero-ease-apply),
+    padding var(--hero-apply-ms) var(--hero-ease-apply),
+    gap var(--hero-apply-ms) var(--hero-ease-apply),
+    box-shadow var(--hero-settle-ms) var(--hero-ease-out),
+    transform 0.18s var(--hero-ease-press);
+}
+
+/* The palette icon is part of the button from the start — it's what the
+   button does, not something a token adds. It inherits currentColor until
+   the accent token gives it a colour of its own. */
+.hero-btn > svg {
+  flex-shrink: 0;
+  transition: color var(--hero-apply-ms) var(--hero-ease-apply);
+}
+
+/* Each rule below is the line the code panel types, verbatim. */
+
+/* color → the label sharpens from muted grey to full ink */
+.hero-btn.is-color {
+  color: var(--btn-text);
+}
+
+/* radius → the corners round */
+.hero-btn.is-radius {
+  border-radius: var(--btn-radius);
+}
+
+/* space → the padding opens up */
+.hero-btn.is-space {
+  padding: var(--btn-space);
+  gap: 7px;
+}
+
+/* accent → the surface takes the accent tint and border, and the palette
+   icon picks up the accent itself. The label stays ink (set by --btn-text),
+   which keeps text contrast high in every theme — the lighter accents
+   (coral, amber) would fail against a tinted background. */
+.hero-btn.is-accent {
+  background: var(--btn-accent);
+  border-color: var(--btn-accent-line);
+}
+
+.hero-btn.is-accent > svg {
+  color: var(--btn-accent-line);
+}
+
+/* settle → one confident ease-out: the shadow arrives and it lands */
+/* settle → the shadow arrives, and the button gives one small pop to mark
+   completion. It starts and ends at rest (never below 1, so there's no snap
+   on frame one and no bounce), and the recovery is roughly twice the length
+   of the rise, with its own gentler curve — so it reads as easing back under
+   its own weight rather than springing. No fill-mode, so `transform` is
+   handed straight back to the hover/press rules when it finishes. */
+.hero-btn.is-settled {
+  box-shadow:
+    0 6px 20px color-mix(in srgb, var(--clr-accent) 16%, transparent),
+    0 1px 3px rgba(0, 0, 0, 0.06);
+  animation: hero-btn-land var(--hero-btn-land-ms);
+}
+
+@keyframes hero-btn-land {
+  0% {
+    transform: scale(1);
+    /* rise: quick and confident */
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  50% {
+    transform: scale(1.03);
+    /* recovery: longer, softer, no overshoot past rest */
+    animation-timing-function: cubic-bezier(0.33, 0, 0.25, 1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-btn.is-settled:hover {
+    background: color-mix(in srgb, var(--clr-accent) 15%, var(--clr-surface));
+    transform: translateY(-1px);
+    box-shadow:
+      0 10px 28px color-mix(in srgb, var(--clr-accent) 22%, transparent),
+      0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.hero-btn.is-settled:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.hero-btn:focus-visible {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 2px;
 }
 
 /* ==========================================================================
@@ -599,12 +1200,27 @@ section[id] { scroll-margin-top: 80px; }
   row-gap: 16px;
 }
 
-.project-card:first-child { border-top: none; }
+.project-card:first-child {
+  border-top: none;
+}
 
-.project-header   { grid-column: 1; grid-row: 1; }
-.project-link-btn { grid-column: 2; grid-row: 1; align-self: start; }
-.project-description { grid-column: 1; grid-row: 2; }
-.project-footer   { grid-column: 1 / -1; grid-row: 3; }
+.project-header {
+  grid-column: 1;
+  grid-row: 1;
+}
+.project-link-btn {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+}
+.project-description {
+  grid-column: 1;
+  grid-row: 2;
+}
+.project-footer {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
 
 .project-company {
   display: block;
@@ -682,102 +1298,15 @@ section[id] { scroll-margin-top: 80px; }
   color: var(--clr-text-2);
   font-size: 17px;
   flex-shrink: 0;
-  transition: border-color 0.15s, color 0.15s, transform 0.2s var(--ease-out);
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    transform 0.2s var(--ease-out);
 }
 .project-link-btn:hover {
   border-color: var(--clr-accent);
   color: var(--clr-accent);
   transform: translate(2px, -2px);
-}
-
-/* ==========================================================================
-   GALLERY
-   ========================================================================== */
-
-.gallery {
-  padding-block: var(--section-py);
-  border-top: 1px solid var(--clr-border);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-/* Wide items span two columns */
-.gallery-item--wide {
-  grid-column: span 2;
-}
-
-.gallery-item {
-  border-radius: var(--r-md);
-  border: 1px solid var(--clr-border);
-  cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.35s var(--ease-out);
-}
-
-.gallery-item:hover {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-thumb {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: var(--r-md);
-  background: var(--clr-bg);
-}
-
-.gallery-item--wide .gallery-thumb {
-  aspect-ratio: 8 / 3;
-}
-
-.gallery-img,
-.gallery-placeholder {
-  width: calc(100% - 32px);
-  height: calc(100% - 32px);
-  margin: 16px;
-  object-fit: contain;
-  transition: transform 0.55s var(--ease-out);
-}
-
-.gallery-placeholder { display: block; }
-
-.gallery-item:hover .gallery-img,
-.gallery-item:hover .gallery-placeholder {
-  transform: scale(1.06);
-}
-
-.gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0);
-  display: flex;
-  align-items: flex-end;
-  padding: 16px;
-  transition: background 0.3s;
-}
-
-.gallery-item:hover .gallery-overlay {
-  background: rgba(0, 0, 0, 0.38);
-}
-
-.gallery-title {
-  font-size: 13px;
-  font-weight: 500;
-  color: #fff;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.3s, transform 0.3s;
-  pointer-events: none;
-}
-
-.gallery-item:hover .gallery-title {
-  opacity: 1;
-  transform: none;
 }
 
 /* ==========================================================================
@@ -805,12 +1334,21 @@ section[id] { scroll-margin-top: 80px; }
   text-decoration: none;
   transition: opacity 0.2s;
 }
-.writing-card:first-child { border-top: none; }
+.writing-card:first-child {
+  border-top: none;
+}
 
-.writing-card:hover { opacity: 0.72; }
-.writing-card:hover .writing-arrow { transform: translate(3px, -3px); }
+.writing-card:hover {
+  opacity: 0.72;
+}
+.writing-card:hover .writing-arrow {
+  transform: translate(3px, -3px);
+}
 
-.writing-content { flex: 1; min-width: 0; }
+.writing-content {
+  flex: 1;
+  min-width: 0;
+}
 
 .writing-badge {
   display: inline-block;
@@ -843,7 +1381,9 @@ section[id] { scroll-margin-top: 80px; }
   font-size: 20px;
   color: var(--clr-text-3);
   flex-shrink: 0;
-  transition: transform 0.25s var(--ease-out), color 0.2s;
+  transition:
+    transform 0.25s var(--ease-out),
+    color 0.2s;
 }
 
 /* ==========================================================================
@@ -1165,8 +1705,12 @@ section[id] { scroll-margin-top: 80px; }
   transition: opacity 0.2s;
 }
 
-.project-card-link:hover { opacity: 0.7; }
-.project-card-link:hover .project-card-arrow { transform: translateX(4px); }
+.project-card-link:hover {
+  opacity: 0.7;
+}
+.project-card-link:hover .project-card-arrow {
+  transform: translateX(4px);
+}
 
 .project-card-arrow {
   display: inline-block;
@@ -1228,7 +1772,9 @@ section[id] { scroll-margin-top: 80px; }
   transform: translateX(-50%) translateY(6px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+  transition:
+    opacity 0.2s var(--ease-out),
+    transform 0.2s var(--ease-out);
   z-index: 50;
   display: block;
   width: 160px;
@@ -1246,7 +1792,9 @@ section[id] { scroll-margin-top: 80px; }
   object-fit: cover;
   border-radius: var(--r-md);
   border: 1px solid var(--clr-border);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.18),
+    0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .about-placeholder {
@@ -1274,7 +1822,9 @@ section[id] { scroll-margin-top: 80px; }
   color: var(--clr-text-2);
   background: var(--clr-surface);
   cursor: default;
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
 .skill-tag:hover {
   border-color: var(--clr-accent);
@@ -1327,7 +1877,9 @@ section[id] { scroll-margin-top: 80px; }
   color: var(--clr-text-2);
   transition: color 0.15s;
 }
-.footer-links a:hover { color: var(--clr-text-1); }
+.footer-links a:hover {
+  color: var(--clr-text-1);
+}
 
 .footer-copy {
   font-size: 12px;
@@ -1339,7 +1891,9 @@ section[id] { scroll-margin-top: 80px; }
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  .nav-links {
+    display: none;
+  }
 
   .nav-links-mobile {
     display: flex;
@@ -1352,10 +1906,16 @@ section[id] { scroll-margin-top: 80px; }
     color: var(--clr-text-2);
     transition: color 0.15s;
   }
-  .nav-links-mobile a:hover { color: var(--clr-text-1); }
-  .nav-links-mobile a.active { color: var(--clr-accent); }
+  .nav-links-mobile a:hover {
+    color: var(--clr-text-1);
+  }
+  .nav-links-mobile a.active {
+    color: var(--clr-accent);
+  }
 
-  .nav-theme-swatches { display: none; }
+  .nav-theme-swatches {
+    display: none;
+  }
   .nav-theme-btn {
     width: 32px;
     padding: 0;
@@ -1370,11 +1930,6 @@ section[id] { scroll-margin-top: 80px; }
   .about-photo-col {
     position: static;
     max-width: 200px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
   }
 
   .project-card {
@@ -1393,130 +1948,9 @@ section[id] { scroll-margin-top: 80px; }
 }
 
 @media (max-width: 540px) {
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .gallery-item--wide {
-    grid-column: span 2;
-  }
-
-  .gallery-item--wide .gallery-thumb {
-    aspect-ratio: 4 / 3;
-  }
-
   .writing-card {
     align-items: flex-start;
   }
-}
-
-/* ==========================================================================
-   MODAL
-   ========================================================================== */
-
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: rgba(0, 0, 0, 0.72);
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  animation: modal-fade 0.2s ease;
-}
-
-.modal-content {
-  position: relative;
-  max-width: min(900px, 90vw);
-  max-height: 90vh;
-  background: var(--clr-surface);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.45);
-  animation: modal-scale 0.25s var(--ease-out);
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-img-wrap {
-  width: 100%;
-  background: var(--clr-bg);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.modal-img {
-  width: 100%;
-  max-height: 76vh;
-  object-fit: contain;
-  display: block;
-}
-
-.modal-caption {
-  padding: 13px 20px 4px;
-  font-size: 13.5px;
-  font-weight: 500;
-  color: var(--clr-text-2);
-  margin: 0;
-  border-top: 1px solid var(--clr-border);
-  flex-shrink: 0;
-}
-
-.modal-description {
-  padding: 0 20px 8px;
-  font-size: 12.5px;
-  line-height: 1.6;
-  color: var(--clr-text-3);
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.modal-link {
-  display: inline-block;
-  padding: 0 20px 14px;
-  font-size: 12.5px;
-  font-weight: 500;
-  color: var(--clr-accent);
-  text-decoration: none;
-  flex-shrink: 0;
-  transition: opacity 0.2s;
-}
-
-.modal-link:hover { opacity: 0.7; }
-
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-  border-radius: var(--r-full);
-  border: none;
-  background: rgba(0, 0, 0, 0.52);
-  color: #fff;
-  font-size: 13px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.15s;
-  line-height: 1;
-}
-
-.modal-close:hover { background: rgba(0, 0, 0, 0.75); }
-
-@keyframes modal-fade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes modal-scale {
-  from { transform: scale(0.96); opacity: 0; }
-  to   { transform: scale(1);    opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

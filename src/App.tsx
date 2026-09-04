@@ -4,7 +4,6 @@ import { Analytics } from '@vercel/analytics/react'
 import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
-import { Gallery } from './components/Gallery'
 import { Writing } from './components/Writing'
 import { Footer } from './components/Footer'
 import { AboutPage } from './pages/AboutPage'
@@ -25,7 +24,6 @@ function HomePage() {
       <main>
         <Hero />
         <Projects />
-        <Gallery />
         <Writing />
       </main>
       <Footer />

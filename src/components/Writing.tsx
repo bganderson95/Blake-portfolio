@@ -5,7 +5,7 @@ const pieces = [
     title: 'Capstone Research Paper',
     badge: 'PDF',
     description:
-      'A systems engineering perspective on complex problem spaces, written during my time at the University of Virginia School of Engineering.',
+      'UX/UI design work from my systems engineering capstone at UVA.',
     url: 'https://s3.us-east-2.amazonaws.com/blakeganderson.com/Capstone%20Paper.pdf',
   },
   {

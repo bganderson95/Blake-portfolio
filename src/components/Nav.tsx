@@ -1,16 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-
-const THEMES = [
-  "sifnos",
-  "ursula",
-  "curacao",
-  "wahoowa",
-  "snowspeeder",
-  "ewok",
-] as const;
-
-type Theme = (typeof THEMES)[number];
+import { type Theme } from "../data/themes";
+import { useTheme } from "../hooks/useTheme";
+import { PaletteIcon } from "./PaletteIcon";
 
 const THEME_PREVIEWS: Record<Theme, [string, string, string]> = {
   sifnos:  ["#fef5ec", "#0d7a70", "#1a0e06"],
@@ -20,28 +12,6 @@ const THEME_PREVIEWS: Record<Theme, [string, string, string]> = {
   snowspeeder: ["#e6eff9", "#d47010", "#091828"],
   ewok:        ["#0e0a06", "#e8780a", "#f5ede0"],
 };
-
-function PaletteIcon() {
-  return (
-    <svg
-      width="15"
-      height="15"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <circle cx="13.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-      <circle cx="17.5" cy="10.5" r="1" fill="currentColor" stroke="none" />
-      <circle cx="8.5" cy="7" r="1" fill="currentColor" stroke="none" />
-      <circle cx="6.5" cy="12.5" r="1" fill="currentColor" stroke="none" />
-      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125C12.92 18.75 12.75 18.42 12.75 18c0-.92.75-1.667 1.667-1.667H16c3.314 0 6-2.686 6-6C22 6.77 17.523 2 12 2z" />
-    </svg>
-  );
-}
 
 function Logo() {
   return (
@@ -68,32 +38,8 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const [currentTheme, setCurrentTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem("theme") as Theme | null;
-    const theme =
-      saved && THEMES.includes(saved)
-        ? saved
-        : THEMES[Math.floor(Math.random() * THEMES.length)];
-    localStorage.setItem("theme", theme);
-    document.documentElement.setAttribute("data-theme", theme);
-    return theme;
-  });
-
-  const nextIndex = (THEMES.indexOf(currentTheme) + 1) % THEMES.length;
-  const nextTheme = THEMES[nextIndex];
+  const { nextTheme, cycleTheme } = useTheme();
   const nextColors = THEME_PREVIEWS[nextTheme];
-
-  const cycleTheme = () => {
-    document.documentElement.classList.add("theme-transitioning");
-    document.documentElement.setAttribute("data-theme", nextTheme);
-    localStorage.setItem("theme", nextTheme);
-    setCurrentTheme(nextTheme);
-    setTimeout(
-      () => document.documentElement.classList.remove("theme-transitioning"),
-      400,
-    );
-  };
-
 
   return (
     <header className={`nav${scrolled ? " nav--scrolled" : ""}`}>
@@ -111,13 +57,11 @@ export function Nav() {
           {isHome ? (
             <>
               <a href="#work">Work</a>
-              <a href="#design">Design</a>
               <a href="#writing">Writing</a>
             </>
           ) : (
             <>
               <Link to="/#work">Work</Link>
-              <Link to="/#design">Design</Link>
               <Link to="/#writing">Writing</Link>
             </>
           )}
