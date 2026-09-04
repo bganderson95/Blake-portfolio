@@ -30,9 +30,11 @@ function persist(theme: Theme) {
 }
 
 /* Applied at import time so the theme is on <html> before first paint —
-   a random one on a first visit, the saved one after that. */
+   the default (first in THEMES) on a first visit, the saved one after that.
+   Deliberately not random: every first-time visitor should see the same
+   site, and the theme they pick afterwards is the one that persists. */
 let current: Theme = (() => {
-  const theme = read() ?? THEMES[Math.floor(Math.random() * THEMES.length)]
+  const theme = read() ?? THEMES[0]
   persist(theme)
   document.documentElement.setAttribute("data-theme", theme)
   return theme

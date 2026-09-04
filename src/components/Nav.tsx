@@ -4,13 +4,15 @@ import { type Theme } from "../data/themes";
 import { useTheme } from "../hooks/useTheme";
 import { PaletteIcon } from "./PaletteIcon";
 
+/* Listed in THEMES order (see data/themes.ts) — purely for readability; this
+   is a lookup, the cycle order comes from THEMES itself. */
 const THEME_PREVIEWS: Record<Theme, [string, string, string]> = {
-  sifnos:  ["#fef5ec", "#0d7a70", "#1a0e06"],
-  ursula:  ["#0c0814", "#f43f5e", "#e8e0f8"],
-  curacao: ["#f3eecc", "#cc1468", "#0a1e3c"],
-  wahoowa: ["#071520", "#ff7050", "#c8e8ee"],
-  snowspeeder: ["#e6eff9", "#d47010", "#091828"],
+  sifnos:      ["#fef5ec", "#0d7a70", "#1a0e06"],
+  wahoowa:     ["#071520", "#ff7050", "#c8e8ee"],
+  curacao:     ["#f3eecc", "#cc1468", "#0a1e3c"],
   ewok:        ["#0e0a06", "#e8780a", "#f5ede0"],
+  snowspeeder: ["#e6eff9", "#d47010", "#091828"],
+  ursula:      ["#0c0814", "#f43f5e", "#e8e0f8"],
 };
 
 function Logo() {

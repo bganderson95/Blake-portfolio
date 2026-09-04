@@ -1,11 +1,3 @@
-export const skills = [
-  "Figma",
-  "React",
-  "TypeScript",
+export const skills = ["Figma", "Design Systems", "CSS", "Animations", "React"];
 
-  "Design Systems",
-  "CSS",
-  "AI prototyping",
-  "Animations",
-  "Accessibility",
-];
+// Figma, Design Systems, CSS, Animations, React, TypeScript
